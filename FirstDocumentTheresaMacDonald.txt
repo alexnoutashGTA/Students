@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-
-I want to step on your toes....
-My name is TheresaMacDonald
-=======
-My name is TheresaMacDonald
->>>>>>> 496ed8a (Second Commit)
+My name is Theresa MacDonald
+One day I have to be a published author!
