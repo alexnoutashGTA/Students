@@ -42,9 +42,6 @@ html {
 
 /* Small devices such as cellphones */
 @media only screen and (max-width: 640px) {
-  html {
-    color: #af1010;
-  }
   .smallBox{
     width: 350px;
     height: 350px;
@@ -60,9 +57,6 @@ html {
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  html {
-    color: #101daf;
-  }
   .smallBox{
     width: 450px;
     height: 450px;
@@ -79,9 +73,6 @@ html {
 
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  html {
-    color: #38af10;
-  }
   .smallBox{
     width: 550px;
     height: 550px;
@@ -97,9 +88,7 @@ html {
 
 /* Largest devices such as desktops (1280px and up) */
 @media only screen and (min-width: 1281px) {
-  html {
-    color: #e8dab9;
-  }
+
 }
 
 
