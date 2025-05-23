@@ -1,4 +1,4 @@
-function toggleSidenav() {
+toggleSidenav = () => {
   const sidenav = document.querySelector("#sidenav");
 
   if (window.innerWidth <= 768) {
