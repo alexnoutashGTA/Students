@@ -48,10 +48,22 @@ width: 100%;
 
 html {
   color: #151515;
+=======
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+
+
+html {
+  color: #151414;
+>>>>>>> e93a211 (First change)
   font-size: 1em;
   line-height: 1.4;
 }
 
+<<<<<<< HEAD
 /* Small devices such as cellphones */
 @media only screen and (max-width: 640px) {
   .smallBox{
@@ -215,6 +227,9 @@ article {
  *
  * Customize the background color to match your design.
  */
+=======
+
+>>>>>>> e93a211 (First change)
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -226,9 +241,13 @@ article {
   text-shadow: none;
 }
 
+<<<<<<< HEAD
 /*
  * A better looking default horizontal rule
  */
+=======
+
+>>>>>>> e93a211 (First change)
 
 hr {
   display: block;
@@ -360,6 +379,141 @@ textarea {
    ========================================================================== */
 
 
+<<<<<<< HEAD
+=======
+
+/* Small devices such as cellphones */
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  html {
+    color: #101daf;
+  }
+    .smallBox{
+      width: 150px;
+      height: 150px;
+      background-color: #af1010;
+      margin: 10px;
+      padding: 50px;
+
+}
+    .container{
+    display: flex;
+    flex-direction: column;}
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  html {
+    color: #38af10;
+  }
+  .smallBox{
+    width: 550px;
+    height: 550px;
+    background-color: #6b6d73;
+
+    padding: 50px;
+    margin: 10px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1281px)  {
+  html {
+    color: chocolate;
+
+  }
+}
+
+
+
+.myCircle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items:center;
+  justify-content:space-between;}
+
+
+  .smallCircle {
+    width: 200px;
+    height: 200px;
+    background-color: #f7ff00;
+    border-radius: 50%;
+    margin: 30px;
+
+
+  }
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  html {
+    color: #101daf;
+  }
+  .smallCircle{
+    width: 150px;
+    height: 150px;
+    background-color: #d000ff;
+    margin: 10px;
+    padding: 50px;
+
+  }
+  .myCircle{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;}}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1080px) {
+  html {
+    color: #af2810;
+  }
+  .smallCircle{
+    width: 150px;
+    height: 150px;
+    background-color: #6b6d73;
+    margin: 10px;
+    padding: 50px;
+
+  }
+  .myCircle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+}
+@media only screen and (min-width: 1081px)  {
+  html {
+    color: #101daf;
+  }
+
+
+  .smallCircle{
+    width: 150px;
+    height: 150px;
+    background-color: #151414;
+    margin: 10px;
+    padding: 50px;
+
+  }
+  .myCircle{
+    display: flex;
+    flex-direction: column;}
+}
+
+
+
+
+
+
+
+>>>>>>> e93a211 (First change)
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),

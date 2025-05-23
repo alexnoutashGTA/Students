@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/ResponsiveUI.iml" filepath="$PROJECT_DIR$/.idea/ResponsiveUI.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/webStormProjects.iml" filepath="$PROJECT_DIR$/.idea/webStormProjects.iml" />
+>>>>>>> e93a211 (First change)
     </modules>
   </component>
 </project>
