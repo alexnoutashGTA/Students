@@ -23,13 +23,25 @@
 </head>
 
 <body class="body">
-
+<nav id="sidenav">
+  <ul>
+    <li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+    <li><a href="#"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+    <li><a href="#"><i class="fa fa-cog"></i><span>Settings</span></a></li>
+  </ul>
+  <div  id="overlay" onclick="toggleSidenav()"></div>
+</nav>
   <!-- Add your site or application content here -->
-  <section></section>
-  <div id="container" class="container">
+<main>
+<header>
+  <h1>Welcome</h1>
+</header>
+<article>
+  <section>
+    <div id="container" class="container">
     <div id="firstBox" class="smallBox">
-      <img src="img/robot.png" alt="icon" class="circle">
-    </div>
+    <img src="img/robot.png" alt="icon" class="circle">
+  </div>
     <div id="secondBox" class="smallBox">
       <img src="icon.svg" alt="icon" class="circle">
     </div>
@@ -40,9 +52,9 @@
       <img src="icon.svg" alt="icon" class="circle">
     </div>
   </div>
-
+  </section>
+</article>
   <script src="js/app.js"></script>
-
+</main>
 </body>
-
 </html>
