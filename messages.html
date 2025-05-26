@@ -1,11 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="">
 <head>
+<<<<<<< HEAD
   <link rel="stylesheet" href="css/messages.css">
   <meta charset="UTF-8">
   <title>Title</title>
+=======
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Messages</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" defer></script>
+>>>>>>> c66584c (First Message Page)
 </head>
-<body>
+<body class="body">
+<button class="toggle" onclick="toggleSidenav()">
+  <i class="fa fa-bars"></i>
+</button>
+<nav id="sidenav">
+  <ul>
+    <li><a href="/index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+    <li><a href="/messages.html" class="active"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+    <li><a href="/details.html"><i class="fa fa-cog"></i><span>Details</span></a></li>
+  </ul>
+  <div id="overlay" onclick="toggleSidenav()"></div>
+</nav>
 
+<main>
+  <header>
+    <h1>Messages</h1>
+  </header>
+  <article class="content">
+    <section id="messages-section" style="flex: 1; display: flex; flex-direction: row; gap: 10px;">
+      <!-- Contacts list -->
+      <aside id="contacts" style="
+          width: 250px;
+          background: #1faea3;
+          border-right: 1px solid #131212;
+          overflow-y: auto;
+          padding: 10px;
+          ">
+        <!-- Contacts will be rendered here by JS -->
+      </aside>
+
+      <!-- Chat area -->
+      <section id="chat" style="flex: 1; display: flex; flex-direction: column;">
+        <div id="messages-list" style="
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background: #d53b3b;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            ">
+          <!-- Messages will be rendered here by JS -->
+        </div>
+        <div id="input-area" style="display: flex; padding: 10px; margin-top: 5px;">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Type a message..."
+            style="
+                flex: 1;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                "
+          />
+          <button id="send-btn" style="
+              margin-left: 10px;
+              background-color: #007bff;
+              border: none;
+              color: white;
+              padding: 10px 20px;
+              border-radius: 5px;
+              cursor: pointer;
+              ">
+            Send
+          </button>
+        </div>
+      </section>
+    </section>
+  </article>
+</main>
 </body>
 </html>
