@@ -10,6 +10,16 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+.content{
+width: 100%;
+  height: 100%;
+  border: #151515 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+.mainSection{
+  background-color: #ae9191;
+}
 .circle {
   border-radius: 50%;
   position: absolute;
