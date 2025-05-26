@@ -4,6 +4,7 @@ const users = [
   { id: 2, name: "Theresa" },
   { id: 3, name: "Team" },
   { id: 4, name: "Tiffany" },
+  { id: 5, name: "Emilie" },
 ];
 
 const messages = {
@@ -14,6 +15,7 @@ const messages = {
   2: [{ from: "Team", text: "Hey! How are you?" }],
   3: [],
   4: [{ from: "Tiffany", text: "Hey! How are you doing?" }],
+  5:  [{from: "Emilie", text: "Hey! How are you?" }],
 }
 
 let selectedUserId = users[0].id;
