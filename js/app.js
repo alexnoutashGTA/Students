@@ -55,7 +55,7 @@ function renderMessages() {
     div.style.borderRadius = "8px";
 
     if (msg.from === "Me") {
-      div.style.backgroundColor = "#007bff";
+      div.style.backgroundColor = "#2c67a6";
       div.style.color = "white";
       div.style.marginLeft = "auto";
       div.style.textAlign = "right";
