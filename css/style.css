@@ -1,6 +1,9 @@
+.avatar-section::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
 .avatar-section{
-  width: 500px;
-  overflow: scroll;
+  width: 1200px;
+  overflow-x: scroll;
 }
 
 .avatar-container {
@@ -10,9 +13,7 @@
   justify-content: center;
   gap: 20px;
   margin-top: 30px;
-  width: 1000px;
--ms-overflow-x: scroll;
-
+  width: 1500px;
 }
 
 .avatar {
