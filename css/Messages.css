@@ -1,109 +1,102 @@
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
-  min-height: 100vh;
-  background-size: cover;
-  background: whitesmoke center;
-  font-family: 'Montserrat', sans-serif;
-  }
+    min-height: 100vh;
+    background-size: cover;
+    background: whitesmoke center;
+    font-family: 'Montserrat', sans-serif;
+}
 .sidenav {
-  width: 250px;
-  height: 100vh;
-  background-color: #333;
-  transition: all 0.3s;
-  padding-top: 60px;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    transition: all 0.3s;
+    padding-top: 60px;
 
-  &.min {
-    width: 60px;
-    span {
-      opacity: 0;
+    &.min {
+        width: 60px;
+        span {
+            opacity: 0;
+        }
     }
-  }
 
-  ul {
-    color: white;
-    a {
-      display: flex;
-      gap: 10px;
-      padding: 10px 20px;
-      color: white;
-      text-decoration: none;
-      &:hover {
-        background-color: gray;
-      }
+    ul {
+        color: white;
+        a {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            &:hover {
+                background-color: gray;
+            }
 
-      span {
-        transition: opacity 0.3s ease-in-out;
-      }
+            span {
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
     }
-  }
 }
 .bread-crumb-list{
-  display: flex;
-  flex-direction: row;
-  background-color: #333;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-  transition: all 0.3s;
-
-  ul{
-    padding-right: 20px;
-  }
+    display: flex;
+    flex-direction: row;
+    ul{
+        padding-right: 20px;
+    }
 
 }
 button.toggle {
-  z-index: 10;
-  position: fixed;
-  left: 12px;
-  top: 10px;
-  background-color: #575757;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+    z-index: 10;
+    position: fixed;
+    left: 12px;
+    top: 10px;
+    background-color: #575757;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 640px) {
 
-  .bread-crumb {
-    display: block;
-  }
-  .sidenav {
-    display: none;
-  }
+    .bread-crumb {
+        display: block;
+    }
+    .sidenav {
+        display: none;
+    }
 
 }
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
 
-  .bread-crumb {
-    display: block;
-  }
-  .sidenav {
-    display: none;
-  }
+    .bread-crumb {
+        display: block;
+    }
+    .sidenav {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 
-  .bread-crumb {
-    display: none;
-  }
-  .sidenav {
-    display: block;
-  }
+    .bread-crumb {
+        display: none;
+    }
+    .sidenav {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1281px) {
-  .bread-crumb{
-    display: none;
-  }
-  .sidenav {
-    display: block;
-  }
+    .bread-crumb{
+        display: none;
+    }
+    .sidenav {
+        display: block;
+    }
 }
 
