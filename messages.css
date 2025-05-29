@@ -3,7 +3,12 @@ body {
   font-family: Arial, sans-serif;
   background: #d3e2f0;
   display: flex;
-  height: 100vh;
+  /*height:100vh;}*/
+li{
+font-size:30px;
+
+
+}
 }
 .sidebar {
   width: 30%;
@@ -89,17 +94,18 @@ body {
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px){
 
-    .sidebar {
-
-      background-color: crimson;
-    }
-
-  }
+body{
+  background: #af1010;
+}
+a{color: #d3e2f0}
+}
 
 
 
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px){
+  body {background-color: #afa710;}
+  a{color: #d3e2f0}
 
 }
 
