@@ -96,3 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupMessaging();
   }
 });
+
+takeMeToMessages = (messageId) =>{
+  window.location.href = 'messages.html';
+}
