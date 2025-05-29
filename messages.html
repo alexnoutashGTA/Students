@@ -8,42 +8,51 @@
   <script src="js/app.js" defer></script>
 </head>
 <body class="body">
-<button class="toggle" onclick="toggleSidenav()">
-  <i class="fa fa-bars"></i>
-</button>
-<nav class="sidebar">
-  <ul>
+
+<nav class="bread-crumb" id="bread-crumb">
+  <ul class="bread-crumb-list">
     <li><a href="/index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
     <li><a href="/messages.html" class="active"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
     <li><a href="/details.html"><i class="fa fa-cog"></i><span>Details</span></a></li>
   </ul>
-  <div id="overlay" onclick="toggleSidenav()"></div>
 </nav>
 
 <main>
-  <header>
+  <div style="display: flex; flex-direction: row;">
     <div>
-      <h1>Messages</h1>
-      <h3>Hope you have a Great Day!</h3>
+      <nav id="sidenav" class="sidenav">
+        <ul>
+          <li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+          <li><a href="/messages.html"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
+          <li><a href="/details.html"><i class="fa fa-cog"></i><span>Details</span></a></li>
+        </ul>
+        <div  id="overlay" onclick="toggleSidenav()"></div>
+      </nav>
     </div>
+    <div>
+      <header>
+        <div>
+          <h1>Messages</h1>
+          <h3>Hope you have a Great Day!</h3>
+        </div>
 
-  </header>
-  <article class="content">
-    <section id="messages-section" style="flex: 1; display: flex; flex-direction: row; gap: 10px;">
-      <!-- Contacts list -->
-      <aside id="contacts" style="
+      </header>
+      <article class="content">
+        <section id="messages-section" style="flex: 1; display: flex; flex-direction: row; gap: 10px;">
+          <!-- Contacts list -->
+          <aside id="contacts" style="
           width: 250px;
           background: #95e6e3;
           border-right: 1px solid #131212;
           overflow-y: auto;
           padding: 10px;
           ">
-        <!-- Contacts will be rendered here by JS -->
-      </aside>
+            <!-- Contacts will be rendered here by JS -->
+          </aside>
 
-      <!-- Chat area -->
-      <section id="chat" style="flex: 1; display: flex; flex-direction: column;">
-        <div id="messages-list" style="
+          <!-- Chat area -->
+          <section id="chat" style="flex: 1; display: flex; flex-direction: column;">
+            <div id="messages-list" style="
             flex: 1;
             padding: 10px;
             overflow-y: auto;
@@ -51,21 +60,21 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             ">
-          <!-- Messages will be rendered here by JS -->
-        </div>
-        <div id="input-area" style="display: flex; padding: 10px; margin-top: 5px;">
-          <input
-            id="message-input"
-            type="text"
-            placeholder="Type a message..."
-            style="
+              <!-- Messages will be rendered here by JS -->
+            </div>
+            <div id="input-area" style="display: flex; padding: 10px; margin-top: 5px;">
+              <input
+                      id="message-input"
+                      type="text"
+                      placeholder="Type a message..."
+                      style="
                 flex: 1;
                 padding: 10px;
                 border-radius: 5px;
                 border: 1px solid #ccc;
                 "
-          />
-          <button id="send-btn" style="
+              />
+              <button id="send-btn" style="
               margin-left: 10px;
               background-color: #2d6cca;
               border: none;
@@ -74,12 +83,15 @@
               border-radius: 5px;
               cursor: pointer;
               ">
-            Send
-          </button>
-        </div>
-      </section>
-    </section>
-  </article>
+                Send
+              </button>
+            </div>
+          </section>
+        </section>
+      </article>
+    </div>
+  </div>
+
 </main>
 </body>
 </html>

@@ -8,82 +8,95 @@ body{
   background: whitesmoke center;
   font-family: 'Montserrat', sans-serif;
   }
+.sidenav {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  transition: all 0.3s;
+  padding-top: 60px;
+
+  &.min {
+    width: 60px;
+    span {
+      opacity: 0;
+    }
+  }
+
+  ul {
+    color: white;
+    a {
+      display: flex;
+      gap: 10px;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        background-color: gray;
+      }
+
+      span {
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+  }
+}
+.bread-crumb-list{
+  display: flex;
+  flex-direction: row;
+  ul{
+    padding-right: 20px;
+  }
+
+}
+button.toggle {
+  z-index: 10;
+  position: fixed;
+  left: 12px;
+  top: 10px;
+  background-color: #575757;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 640px) {
-  nav {
-    background-color: lightgray;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+  .bread-crumb {
+    display: block;
+  }
+  .sidenav {
+    display: none;
   }
 
-  nav ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav li {
-    height: 50px;
-  }
-
-  nav a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-
-  nav a:hover {
-    background-color: white;
-  }
-
-  nav a:hover {
-    margin-right: auto;
-  }
 }
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  .smallBox {
-    width: 450px;
-    height: 450px;
-    padding: 50px;
-    margin: 10px;
-    background: #101daf;
 
+  .bread-crumb {
+    display: block;
   }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav {
-    position: fixed;
-    left: -250px;
-    top: 0;
-
-    &.active {
-      left: 0;
-
-      #overlay {
-        left: 250px;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      visibility: hidden;
-      opacity: 0;
-      transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
+  .sidenav {
+    display: none;
   }
 }
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+  .bread-crumb {
+    display: none;
+  }
+  .sidenav {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .bread-crumb{
+    display: none;
+  }
+  .sidenav {
+    display: block;
+  }
+}
+
