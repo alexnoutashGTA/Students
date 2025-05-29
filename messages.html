@@ -1,36 +1,49 @@
+<!-- messages.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Message Details</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/messages.css">
 </head>
 <body>
+<nav class="sidenav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="messages.html">Messages</a></li>
+    <li><a href="details.html">Details</a></li>
+  </ul>
+</nav>
 
-<header>
-  <h1>Inbox Message</h1>
-</header>
+<main class="content">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &gt; Messages
+  </div>
 
-<section>
-  <div class="message-container">
-    <div class="message-header">
-      <h2>Subject: Welcome to the VOA Real Estate</h2>
-      <p><strong>From:</strong> Vishal Sagar</p>
-      <p><strong>Date:</strong> May 27, 2025</p>
+  <div class="messages-container">
+    <div class="users">
+      <h3>Users</h3>
+      <ul>
+        <li>Amit</li>
+        <li>Sara</li>
+        <li>John</li>
+        <li>Fatima</li>
+      </ul>
     </div>
 
-
-    <div class="message-body">
-      <p>Hi there,</p>
-      <p>We’re excited to have you on board. Let us know if you need anything!</p>
-      <p>Regards,<br>Team Lead</p>
-    </div>
-
-    <div class="message-footer">
-      <p><strong>Message ID:</strong> #56789</p>
+    <div class="chat">
+      <div class="chat-box">
+        <div class="message sent">Hi, how are you?</div>
+        <div class="message received">I'm good! You?</div>
+      </div>
+      <div class="input-area">
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+      </div>
     </div>
   </div>
-</section>
-
+</main>
 </body>
 </html>

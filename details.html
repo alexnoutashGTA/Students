@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>User Details with Sidebar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="details.css" />
 </head>
 <body>
-
-<div class="layout">
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Messages</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Settings</a></li>
-    </ul>
-  </aside>
-
-  <!-- Main content -->
-  <main class="main-content">
-    <header>
-      <h1>User Details</h1>
-    </header>
-
-    <section class="detail-container">
-      <div class="detail-header">
-        <h2>Jane Doe</h2>
-        <p><strong>Role:</strong> Software Engineer</p>
-        <p><strong>Joined:</strong> January 15, 2024</p>
-      </div>
-
-      <div class="detail-body">
-        <p><strong>Email:</strong>Vishal.Sagar@example.com</p>
-        <p><strong>Location:</strong> Toronto, Canada</p>
-        <p><strong>Bio:</strong> Vishal is a passionate developer with expertise in front-end design and user experience.</p>
-      </div>
-
-      <div class="detail-footer">
-        <p><strong>User ID:</strong> #98765</p>
-      </div>
-    </section>
-  </main>
+<div class="sidenav">
+  <h2>My Portal</h2>
+  <a href="index.html">Home</a>
+  <a href="messages.html">Messages</a>
+  <a href="details.html" class="active">Details</a>
 </div>
 
+<div class="main-content">
+  <div class="breadcrumbs">
+    <p>Home > Details</p>
+  </div>
+
+  <div class="details-container">
+    <h2>Student Information</h2>
+    <div class="detail-row">
+      <strong>Name:</strong> <span>Vishal Sagar</span>
+    </div>
+    <div class="detail-row">
+      <strong>Email:</strong> <span>vishal@example.com</span>
+    </div>
+    <div class="detail-row">
+      <strong>Course:</strong> <span>Web Development</span>
+    </div>
+    <div class="detail-row">
+      <strong>Enrollment:</strong> <span>Full Time</span>
+    </div>
+    <div class="detail-row">
+      <strong>Student ID:</strong> <span>12345678</span>
+    </div>
+    <div class="detail-row">
+      <strong>Status:</strong> <span class="status-active">Active</span>
+    </div>
+  </div>
+</div>
 </body>
 </html>

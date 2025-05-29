@@ -241,10 +241,60 @@ article {
   background: #b3d4fc;
   text-shadow: none;
 }
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #eee;
+  font-size: 14px;
+}
 
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration:underline;
+}
 /*
  * A better looking default horizontal rule
- */
+ */body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     display: flex;
+   }
+
+.sidenav {
+  width: 200px;
+  background-color: #111;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding-top: 20px;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav ul li {
+  padding: 10px 20px;
+}
+
+.sidenav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidenav ul li a:hover {
+  background-color: #575757;
+  display: block;
+}
+
+.content {
+  margin-left: 220px; /* push main content beside sidebar */
+  padding:20px;
+}
 
 hr {
   display: block;
