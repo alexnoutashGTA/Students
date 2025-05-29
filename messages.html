@@ -1,49 +1,38 @@
-<!-- messages.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/messages.css">
+  <title>Messages Page</title>
+  <link rel="stylesheet" href="css/messages.css"> <!-- ✅ LINK TO YOUR CSS FILE -->
 </head>
 <body>
-<nav class="sidenav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="messages.html">Messages</a></li>
-    <li><a href="details.html">Details</a></li>
-  </ul>
-</nav>
+<div class="messages-container"> <!-- ✅ START WRAPPER -->
 
-<main class="content">
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> &gt; Messages
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <a href="details.html">Details</a>
+    <a href="messages.html">Messages</a>
   </div>
 
-  <div class="messages-container">
-    <div class="users">
-      <h3>Users</h3>
-      <ul>
-        <li>Amit</li>
-        <li>Sara</li>
-        <li>John</li>
-        <li>Fatima</li>
-      </ul>
+  <div class="main-content">
+    <div class="breadcrumb">
+      <p><a href="index.html">Home</a> > Messages</p>
     </div>
 
-    <div class="chat">
-      <div class="chat-box">
-        <div class="message sent">Hi, how are you?</div>
-        <div class="message received">I'm good! You?</div>
-      </div>
-      <div class="input-area">
-        <input type="text" placeholder="Type a message...">
-        <button>Send</button>
-      </div>
+    <div class="message-box">
+      <h2>Send a Message</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
-</main>
+
+</div> <!-- ✅ END WRAPPER -->
 </body>
 </html>

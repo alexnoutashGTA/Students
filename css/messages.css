@@ -1,134 +1,117 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  display: flex;
 }
 
-/* SIDENAV */
+.messages-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff9e6; /* light background */
+}
+
 .sidenav {
   width: 200px;
-  background-color: #222;
+  background-color: #333;
+  color: white;
   height: 100vh;
   padding-top: 20px;
   position: fixed;
 }
 
-.sidenav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidenav li a {
-  color: white;
-  padding: 10px 15px;
+.sidenav a {
   display: block;
+  padding: 10px 15px;
   text-decoration: none;
-}
-
-.sidenav li a.active,
-.sidenav li a:hover {
-  background-color: #575757;
-}
-
-/* BREADCRUMB */
-.breadcrumb {
-  margin-left: 220px;
-  padding: 10px 20px;
-  background-color: #f4f4f4;
-  font-size: 14px;
-}
-
-/* MAIN CONTENT */
-.content {
-  margin-left: 220px;
-  padding: 20px;
-}
-
-/* CHAT AREA */
-.chat-container {
-  display: flex;
-  gap: 20px;
-}
-
-.user-list {
-  width: 200px;
-  background-color: #f1f1f1;
-  border-right: 1px solid #ccc;
-  padding: 10px;
-}
-
-.user-list h3 {
-  margin-top: 0;
-}
-
-.user-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.user-list li {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
-
-.chat-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.messages {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  background-color: #fff;
-}
-
-.message {
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 60%;
-}
-
-.message.sent {
-  background-color: #d1e7dd;
-  align-self: flex-end;
-}
-
-.message.received {
-  background-color: #f8d7da;
-  align-self: flex-start;
-}
-
-.message-input {
-  display: flex;
-  padding: 10px;
-  background-color: #eee;
-  border-top: 1px solid #ccc;
-}
-
-.message-input input {
-  flex: 1;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.message-input button {
-  padding: 8px 12px;
-  margin-left: 10px;
-  border: none;
-  background-color: #007bff;
   color: white;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.message-input button:hover {
-  background-color:#0056b3;
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+}
+
+.message-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    .main-content {
+      margin-left: 0;
+    }
+  }
 }
