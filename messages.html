@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Messages Page</title>
-  <link rel="stylesheet" href="css/messages.css"> <!-- ✅ LINK TO YOUR CSS FILE -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages - Vishal Portal</title>
+  <link rel="stylesheet" href="css/messages.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-<div class="messages-container"> <!-- ✅ START WRAPPER -->
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+  <a href="index.html">Home</a> > <a href="messages.html">Messages</a>
+</nav>
 
-  <div class="sidenav">
-    <a href="index.html">Home</a>
-    <a href="details.html">Details</a>
-    <a href="messages.html">Messages</a>
-  </div>
+<!-- Main Container -->
+<div class="messages-container">
 
-  <div class="main-content">
-    <div class="breadcrumb">
-      <p><a href="index.html">Home</a> > Messages</p>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="messages.html" class="active"><i class="fa fa-envelope"></i> Messages</a></li>
+      <li><a href="details.html"><i class="fa fa-user"></i> Details</a></li>
+      <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+      <li><a href="#"><i class="fa fa-info-circle"></i> Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Chat Section -->
+  <main class="chat-section">
+    <header>
+      <h1>Messages</h1>
+      <p>Welcome back, Vishal! Who would you like to chat with?</p>
+    </header>
+
+    <div class="chat-layout">
+      <!-- Contacts -->
+      <aside class="contacts">
+        <ul>
+          <li>Vihaan</li>
+          <li>Neha</li>
+          <li>Sana</li>
+          <li>Riya</li>
+          <li>Ayaan</li>
+          <li>Tarun</li>
+          <li>Megha</li>
+        </ul>
+      </aside>
+
+      <!-- Chat Box -->
+      <section class="chat-box">
+        <div class="messages">
+          <p><strong>Vihaan:</strong> Hi Vishal!</p>
+          <p><strong>You:</strong> Hello! How are you?</p>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Type your message..." />
+          <button>Send</button>
+        </div>
+      </section>
     </div>
-
-    <div class="message-box">
-      <h2>Send a Message</h2>
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
-
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </div>
-
-</div> <!-- ✅ END WRAPPER -->
+  </main>
+</div>
 </body>
 </html>
