@@ -1,8 +1,14 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
+.menu-button {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 .messages-container {
   display: flex;
   min-height: 100vh;
@@ -41,6 +47,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 0 10px #ccc;
 }
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {

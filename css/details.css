@@ -1,35 +1,117 @@
 body {
-  font-family: Verdana, sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #80deea);
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.details-container {
+.messages-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff9e6; /* light background */
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+}
+
+.sidenav a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.main-content {
+  margin-left: 200px;
   padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  flex-grow: 1;
 }
 
-h2 {
-  color: #006064;
-  text-align: center;
+.breadcrumb {
+  margin-bottom: 20px;
 }
 
-.details-card {
-  background-color: #ffffff;
+.message-box {
+  background-color: #fff;
   padding: 20px;
-  margin-top: 20px;
-  border-left: 5px solid #00796b;
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ccc;
 }
 
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .details-container {
-    padding: 10px;
+  .sidenav {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
 
-  .details-card {
-    font-size: 14px;
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    .main-content {
+      margin-left: 0;
+    }
   }
 }
