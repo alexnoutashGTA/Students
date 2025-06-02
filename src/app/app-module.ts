@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { SideMenu } from './side-menu/side-menu';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    SideMenu
   ],
   imports: [
     BrowserModule,
