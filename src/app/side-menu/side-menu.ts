@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MainService} from '../services/main-service';
 
 @Component({
   selector: 'app-side-menu',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './side-menu.css'
 })
 export class SideMenu {
+  message: String = "";
 
+  constructor(private serv: MainService ) {
+    this.message = serv.Greetings;
+  }
 }
