@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MenuService {
 
-  HomeLabel: String = "Home";
+  HomeLabel: String = "Back Home";
   MessageLabel: String = "Messages";
   DetailedLabel: String = "Details";
 
