@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MainService} from '../services/main-service';
+import {MenuService} from '../services/menu-service';
 
 @Component({
   selector: 'app-side-menu',
@@ -8,9 +8,13 @@ import {MainService} from '../services/main-service';
   styleUrl: './side-menu.css'
 })
 export class SideMenu {
-  message: String = "";
+  homeLabel: String = "";
+  messagesLabel: String = "";
+  detailsLabel: String = "";
 
-  constructor(private serv: MainService ) {
-    this.message = serv.Greetings;
+  constructor(private serv: MenuService) {
+    this.homeLabel = serv.HomeLabel;
+    this.messagesLabel = serv.MessageLabel;
+    this.detailsLabel = serv.DetailedLabel;
   }
 }
