@@ -14,7 +14,7 @@ describe('MenuService', () => {
     expect(service).toBeTruthy();
   });
   it('Home label should be Home', () => {
-    expect(service.HomeLabel).toEqual("Back Home");
+    expect(service.HomeLabel).toEqual("Home");
   });
   it('Home label should be Go to Messages', () => {
     expect(service.MessageLabel).toEqual("Go to Messages");
