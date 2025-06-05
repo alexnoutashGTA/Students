@@ -3,7 +3,7 @@ import {Home} from './home/home';
 import {Messages} from './messages/messages';
 import {Detail} from './detail/detail';
 
-export const routes: Routes = [
+export const MyRoutes: Routes = [
   {
     path: '',
     component: Home,
