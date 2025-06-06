@@ -19,4 +19,7 @@ describe('MenuService', () => {
   it('Home label should be Go to Messages', () => {
     expect(service.MessageLabel).toEqual("Go to Messages");
   });
+  it('Detail label should be detail', () => {
+    expect(service.DetailedLabel).toEqual("Details");
+  });
 });
