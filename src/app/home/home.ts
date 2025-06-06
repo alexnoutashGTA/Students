@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MainService} from '../services/main-service';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.css'
 })
 export class Home {
+
+  imagesLinks: string[] = []
+
+  constructor(private service: MainService) {
+    this.imagesLinks = service.ImagesLinks;
+  }
 
 }
