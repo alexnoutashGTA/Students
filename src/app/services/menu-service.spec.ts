@@ -22,4 +22,7 @@ describe('MenuService', () => {
   it('Detail label should be detail', () => {
     expect(service.DetailedLabel).not.toEqual("byebye");
   });
+  it('Detail label should be DetailsLink', () => {
+    expect(service.DetailedLabel).toBe("Details");
+  });
 });

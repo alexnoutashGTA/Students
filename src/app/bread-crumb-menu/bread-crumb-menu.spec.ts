@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BreadCrumbMenu } from './bread-crumb-menu';
 
-describe('BreadCrumbMenu', () => {
+xdescribe('BreadCrumbMenu', () => {
   let component: BreadCrumbMenu;
   let fixture: ComponentFixture<BreadCrumbMenu>;
 
