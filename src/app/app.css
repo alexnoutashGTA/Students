@@ -1,4 +1,28 @@
 .body{
   display: flex;
-  flex-direction: row;
+}
+.main-body{
+  padding: 50px;
+}
+@media only screen and (max-width: 640px) {
+  .body{
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .body{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .body{
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .body{
+    flex-direction: row;
+  }
 }

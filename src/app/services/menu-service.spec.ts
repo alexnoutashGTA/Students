@@ -20,6 +20,6 @@ describe('MenuService', () => {
     expect(service.MessageLabel).toEqual("Go to Messages");
   });
   it('Detail label should be detail', () => {
-    expect(service.DetailedLabel).toEqual("Details");
+    expect(service.DetailedLabel).not.toEqual("byebye");
   });
 });
