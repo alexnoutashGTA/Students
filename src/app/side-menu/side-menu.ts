@@ -15,6 +15,7 @@ export class SideMenu {
   messageLink: string ="";
   detailLink: string = "";
 
+
   constructor(private serv: MenuService) {
     this.homeLabel = serv.HomeLabel;
     this.messagesLabel = serv.MessageLabel;
