@@ -9,5 +9,9 @@ export class MenuService {
   MessageLabel: String = "Go to Messages";
   DetailedLabel: String = "Details";
 
+  HomeLink= "";
+  MessageLink="messages";
+  DetailsLink = "detail"
+
   constructor() { }
 }

@@ -1,10 +1,11 @@
 <div>
 <nav id="sidenav" class="sidenav">
   <ul>
-    <li><a routerLink=""><i class="fa fa-home"></i><span>{{ homeLabel }}</span></a></li>
-    <li><a routerLink="messages"><i class="fa fa-envelope"></i><span>{{ messagesLabel }}</span></a></li>
-    <li><a routerLink="detail"><i class="fa fa-cog"></i><span>{{ detailsLabel }}</span></a></li>
+    <li ><a [routerLink]="[homelink]"><i class="fa fa-home"></i><span>{{ homeLabel }}</span></a></li>
+    <li><a [routerLink]="[messageLink]"><i class="fa fa-envelope"></i><span>{{ messagesLabel }}</span></a></li>
+    <li><a [routerLink]="detailLink"><i class="fa fa-cog"></i><span>{{ detailsLabel }}</span></a></li>
   </ul>
 </nav>
 </div>
+
 

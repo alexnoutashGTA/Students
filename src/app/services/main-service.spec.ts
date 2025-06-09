@@ -20,4 +20,5 @@ describe('MainService', () => {
   it('images array last item should contain 10', () => {
     expect(service.ImagesLinks[9]).toContain("10");
   });
+
 });
