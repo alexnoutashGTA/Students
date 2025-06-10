@@ -14,9 +14,11 @@ export class BreadCrumbMenu {
   homelink: string = "";
   messageLink: string ="";
   detailLink: string = "";
+  linkList: string[] = [];
+  labelList: string[] = []
 
-  LinksList = ["","messages","detail"];
-  LabelList = ["Home","Go to Messages","Details"];
+
+
 
 
   constructor(private serv: MenuService) {
@@ -26,5 +28,7 @@ export class BreadCrumbMenu {
     this.homelink= serv.HomeLink;
     this.messageLink=serv.MessageLink;
     this.detailLink = serv.DetailsLink;
+    this.linkList=serv.LinksList;
+    this.labelList = serv.LabelList;
   }
 }
