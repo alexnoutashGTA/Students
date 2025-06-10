@@ -17,7 +17,7 @@ export class BreadCrumbMenu {
   messageLink: string ="";
   detailLink: string = "";
   linkList: string[] = [];
-  labelList: string[] = []
+  labelList: string[] = [];
 
 
 
