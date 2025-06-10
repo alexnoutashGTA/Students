@@ -40,3 +40,4 @@ export class BreadCrumbMenu {
     this.menuClicked.emit(i)
   }
 }
+
