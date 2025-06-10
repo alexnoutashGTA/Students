@@ -14,6 +14,8 @@ export class SideMenu {
   homelink: string = "";
   messageLink: string ="";
   detailLink: string = "";
+  linkList: string[] = [];
+  labelList: string[] = []
 
 
   constructor(private serv: MenuService) {
@@ -23,5 +25,7 @@ export class SideMenu {
     this.homelink= serv.HomeLink;
     this.messageLink=serv.MessageLink;
     this.detailLink = serv.DetailsLink;
+    this.linkList=serv.LinksList;
+    this.labelList = serv.LabelList;
   }
 }

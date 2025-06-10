@@ -13,5 +13,7 @@ export class MenuService {
   MessageLink="messages";
   DetailsLink = "detail"
 
+  LinksList = ["","messages","detail"];
+  LabelList = ["Home","Go to Messages","Details"];
   constructor() { }
 }
