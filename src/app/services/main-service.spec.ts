@@ -34,4 +34,3 @@ describe('MainService', () => {
     expect(ind).toBe(36);
   });
 });
-
