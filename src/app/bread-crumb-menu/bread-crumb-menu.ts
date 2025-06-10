@@ -15,6 +15,10 @@ export class BreadCrumbMenu {
   messageLink: string ="";
   detailLink: string = "";
 
+  LinksList = ["","messages","detail"];
+  LabelList = ["Home","Go to Messages","Details"];
+
+
   constructor(private serv: MenuService) {
     this.homeLabel = serv.HomeLabel;
     this.messagesLabel = serv.MessageLabel;

@@ -1,9 +1,9 @@
 <div class="bread-crumb">
   <nav>
     <ul class="bread-crumb-list">
-              <li ><a [routerLink]="homelink"><i class="fa fa-home"></i><span>{{ homeLabel }}</span></a></li>
-        <li><a [routerLink]="messageLink"><i class="fa fa-envelope"></i><span>{{ messagesLabel }}</span></a></li>
-        <li><a [routerLink]="detailLink"><i class="fa fa-cog"></i><span>{{ detailsLabel }}</span></a></li>
+      <ul>
+        <li [id]="i" *ngFor="let link of LinksList; index as i; " ><a [routerLink]="link">
+          <i class="fa fa-home"></i><span>{{ LabelList[i] }}</span></a></li>
       </ul>
   </nav>
 </div>
