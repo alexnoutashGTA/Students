@@ -15,7 +15,7 @@ export class MainService {
   }
   HomePageNumberDecremented = ()=>{
     if (this.HomePageNumber > 0) {
-      this.HomePageNumber += 1;
+      this.HomePageNumber -= 1;
     }
   }
 
