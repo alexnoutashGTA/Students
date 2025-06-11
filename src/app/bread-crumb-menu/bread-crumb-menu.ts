@@ -33,6 +33,7 @@ export class BreadCrumbMenu {
     this.linkList=serv.LinksList;
     this.labelList = serv.LabelList;
   }
-
 }
+
+
 
