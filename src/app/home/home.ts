@@ -15,4 +15,11 @@ export class Home {
     this.imagesLinks = service.ImagesLinks;
   }
 
+  leftButtonClicked() {
+      console.log('leftButtonClicked');
+  }
+
+  rightButtonClicked() {
+    console.log('rightButtonClicked');
+  }
 }

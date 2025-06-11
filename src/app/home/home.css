@@ -208,4 +208,12 @@ article {
   padding: 20px;
 }
 
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
