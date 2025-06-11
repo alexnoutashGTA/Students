@@ -6,6 +6,18 @@ import { Injectable } from '@angular/core';
 export class MainService {
   ImagesLinks: string[]=[]
 
+  HomePageNumber: number = 0;
+
+  HomePageNumberIncremented = ()=>{
+    if (this.HomePageNumber <this.ImagesLinks.length-5){}
+    this.HomePageNumber = this.HomePageNumber +1;
+  }
+  HomePageNumberDecremented = ()=>{
+    if (this.HomePageNumber > 1) {
+      this.HomePageNumber = this.HomePageNumber - 1;
+    }
+  }
+
   constructor() {
      this.ImagesLinks= [
       "https://randomuser.me/api/portraits/men/1.jpg",
