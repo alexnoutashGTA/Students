@@ -9,12 +9,13 @@ export class MainService {
   HomePageNumber: number = 0;
 
   HomePageNumberIncremented = ()=>{
-    if (this.HomePageNumber <this.ImagesLinks.length-5){}
-    this.HomePageNumber = this.HomePageNumber +1;
+    if ((this.HomePageNumber +1) *5 <this.ImagesLinks.length){
+    this.HomePageNumber += 1;
+    }
   }
   HomePageNumberDecremented = ()=>{
-    if (this.HomePageNumber > 1) {
-      this.HomePageNumber = this.HomePageNumber - 1;
+    if (this.HomePageNumber > 0) {
+      this.HomePageNumber += 1;
     }
   }
 
