@@ -16,11 +16,10 @@ export class Home {
   }
 
   leftButtonClicked() {
-      console.log('leftButtonClicked');
-      this.service.HomePageNumberDecremented();
+    console.log('leftButtonClicked');
+    this.service.HomePageNumberDecremented();
     let pageNumber: number = this.service.HomePageNumber;
-    this.imagesLinks = this.service.ImagesLinks.slice(pageNumber*5, (pageNumber+1)*5);
-
+    this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
   }
 
   rightButtonClicked() {
