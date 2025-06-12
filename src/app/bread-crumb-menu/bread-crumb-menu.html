@@ -4,8 +4,8 @@
   <nav>
     <ul class="bread-crumb-list">
       <p>{{title}}</p>
-        <li [id]="i" *ngFor="let link of linkList; index as i; " ><a [routerLink]="link">
-          <i class="fa fa-home"></i><span>{{ labelList[i] }}</span></a></li>
+      <li (click)="linkClicked(i)" [id]="i" *ngFor="let link of linkList; index as i; " ><a [routerLink]="link">
+        <i class="fa fa-home"></i><span>{{ labelList[i] }}</span></a></li>
       </ul>
   </nav>
 </div>
