@@ -5,8 +5,10 @@ import {MenuService} from '../services/menu-service';
 @Component({
   selector: 'app-bread-crumb-menu',
   standalone: false,
-  templateUrl: './bread-crumb-menu.html',
+  templateUrl:'./bread-crumb-menu.html',
   styleUrl: './bread-crumb-menu.css'
+
+
 })
 export class BreadCrumbMenu {
   @Input() title = ''; // decorate the property with @Input()
@@ -21,7 +23,7 @@ export class BreadCrumbMenu {
   linkList: string[] = [];
   labelList: string[] = [];
 
-
+  @Input() title = ''; // decorate the property with @Input()
 
 
 
@@ -34,6 +36,7 @@ export class BreadCrumbMenu {
     this.detailLink = serv.DetailsLink;
     this.linkList=serv.LinksList;
     this.labelList = serv.LabelList;
+
   }
 
   linkClicked(i: number) {
