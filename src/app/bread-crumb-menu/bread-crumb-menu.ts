@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {MenuService} from '../services/menu-service';
+
 
 @Component({
   selector: 'app-bread-crumb-menu',
@@ -9,6 +10,7 @@ import {MenuService} from '../services/menu-service';
 })
 export class BreadCrumbMenu {
   @Input() title = ''; // decorate the property with @Input()
+  @Output() menuClicked = new EventEmitter();
 
   homeLabel: String = "";
   messagesLabel: String = "";
@@ -32,5 +34,9 @@ export class BreadCrumbMenu {
     this.detailLink = serv.DetailsLink;
     this.linkList=serv.LinksList;
     this.labelList = serv.LabelList;
+  }
+
+  linkClicked(i: number) {
+    this.menuClicked.emit(i)
   }
 }
