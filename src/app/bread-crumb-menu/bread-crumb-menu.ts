@@ -19,7 +19,7 @@ export class BreadCrumbMenu {
   linkList: string[] = [];
   labelList: string[] = []
 
-
+  @Input() title = ''; // decorate the property with @Input()
 
 
 
