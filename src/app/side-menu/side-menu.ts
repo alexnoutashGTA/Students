@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+=======
+import {Component, Input, output} from '@angular/core';
+>>>>>>> 3563a31 (changes)
 import {MenuService} from '../services/menu-service';
 
 @Component({
