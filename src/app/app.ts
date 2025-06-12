@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class App {
   protected title = 'MyBook';
+  sideMenuTitle: string = 'Welcome to MyBook!';
 }

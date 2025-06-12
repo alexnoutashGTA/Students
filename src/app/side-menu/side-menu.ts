@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MenuService} from '../services/menu-service';
 
 @Component({
@@ -8,6 +8,8 @@ import {MenuService} from '../services/menu-service';
   styleUrl: './side-menu.css'
 })
 export class SideMenu {
+  @Input() title = ''; // decorate the property with @Input()
+
   homeLabel: String = "";
   messagesLabel: String = "";
   detailsLabel: String = "";
