@@ -8,20 +8,10 @@ import { Component } from '@angular/core';
 })
 export class App {
   protected title = 'MyBook';
-  sideMenuTitle: string = 'Welcome to MyBook!';
-<<<<<<< HEAD
-<<<<<<< HEAD
   breadCrumbTitle: string = 'Welcome to MyBook!';
-=======
-=======
->>>>>>> f666295 (changes)
-  breadCrumbMenuSecondTitle:string='Hello Everyone!';
+  sideMenuTitle: string = 'Welcome to MyBook!';
 
->>>>>>> 6aa0f38 (Added EventEmitter to Side Menu)
   menuItemClicked($event: any) {
     console.log($event)
   }
-=======
-  breadcrumbTitle: string = 'Welcome to MyBook!';
->>>>>>> 3563a31 (changes)
 }
