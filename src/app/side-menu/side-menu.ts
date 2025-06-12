@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {MenuService} from '../services/menu-service';
 
 @Component({
@@ -9,6 +9,7 @@ import {MenuService} from '../services/menu-service';
 })
 export class SideMenu {
   @Input() title = ''; // decorate the property with @Input()
+  @Output() menuClicked = new EventEmitter();
 
   homeLabel: String = "";
   messagesLabel: String = "";
@@ -29,5 +30,9 @@ export class SideMenu {
     this.detailLink = serv.DetailsLink;
     this.linkList=serv.LinksList;
     this.labelList = serv.LabelList;
+  }
+
+  linkClicked(i: number) {
+    this.menuClicked.emit(i)
   }
 }

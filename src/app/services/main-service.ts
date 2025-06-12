@@ -38,9 +38,6 @@ export class MainService {
     this.ImagesLinks.push("https://randomuser.me/api/portraits/men/15.jpg");
 
     this.ImagesLinks.splice(5, 0, "https://randomuser.me/api/portraits/men/16.jpg");
-    console.log("Total length: " + this.ImagesLinks.length);
-    this.ImagesLinks.forEach(link => {
-      console.log(link);
-    });
+
   }
 }
