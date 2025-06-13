@@ -3,7 +3,7 @@
   <p>{{title}}</p>
   <nav id="sidenav" class="sidenav">
   <ul>
-    <li (click)="linkClicked(i)" [id]="i" *ngFor="let link of linkList; index as i; " ><a [routerLink]="link">
+    <li [id]="i" *ngFor="let link of linkList; index as i; " ><a [routerLink]="link">
       <i class="fa fa-home"></i><span>{{ labelList[i] }}</span></a></li>
   </ul>
 </nav>
