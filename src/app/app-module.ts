@@ -8,6 +8,7 @@ import { Home } from './home/home';
 import { Messages } from './messages/messages';
 import { Detail } from './detail/detail';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
+import { Profile } from './profile/profile';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
     SideMenu,
     Home,
     Messages,
-    Detail
+    Detail,
+    Profile
   ],
   imports: [
     BrowserModule,
