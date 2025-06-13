@@ -18,23 +18,22 @@ export class BreadCrumbMenu {
   messagesLabel: String = "";
   detailsLabel: String = "";
   homelink: string = "";
-  messageLink: string ="";
+  messageLink: string = "";
   detailLink: string = "";
   linkList: string[] = [];
   labelList: string[] = [];
 
-  @Input() title = ''; // decorate the property with @Input()
-
+  @Output() menuClicked = new EventEmitter();
 
 
   constructor(private serv: MenuService) {
     this.homeLabel = serv.HomeLabel;
     this.messagesLabel = serv.MessageLabel;
     this.detailsLabel = serv.DetailedLabel;
-    this.homelink= serv.HomeLink;
-    this.messageLink=serv.MessageLink;
+    this.homelink = serv.HomeLink;
+    this.messageLink = serv.MessageLink;
     this.detailLink = serv.DetailsLink;
-    this.linkList=serv.LinksList;
+    this.linkList = serv.LinksList;
     this.labelList = serv.LabelList;
 
   }
@@ -43,6 +42,5 @@ export class BreadCrumbMenu {
     this.menuClicked.emit(i)
   }
 }
-
 
 
