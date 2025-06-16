@@ -9,6 +9,7 @@ import { Messages } from './messages/messages';
 import { Detail } from './detail/detail';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 import { Profile } from './profile/profile';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { Profile } from './profile/profile';
     Detail,
     Profile
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [
     provideBrowserGlobalErrorListeners()
   ],

@@ -26,8 +26,8 @@ export class Home implements OnInit, OnChanges {
   }
 
   ngOnChanges(){
-   /* console.log("Home Page changes detected");
-    console.log("Test number: " +this.testNumber);*/
+   console.log("Home Page changes detected");
+    console.log("selectedHomeProfile " +this.selectedHomeProfile);
   }
 
     leftButtonClicked() {
@@ -35,7 +35,6 @@ export class Home implements OnInit, OnChanges {
     this.service.HomePageNumberDecremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
-    this.selectedHomeProfile = "James Bond";
 
   }
 
@@ -44,6 +43,5 @@ export class Home implements OnInit, OnChanges {
     this.service.HomePageNumberIncremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber*5, (pageNumber+1)*5);
-    this.selectedHomeProfile = "John Lennon";
   }
 }
