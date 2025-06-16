@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
+import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvider';
 
 @Component({
   selector: 'app-messages',
@@ -15,5 +16,6 @@ export class Messages {
     event.preventDefault();
 
     console.log('Form submitted'+" "+this.formMessage.userName+" "+this.formMessage.message);
+    console.log (dateTimestampProvider)
   }
 }
