@@ -12,6 +12,7 @@ export class Home implements OnInit, OnChanges {
   imagesLinks: string[] = []
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
+  message: string = '';
 
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');

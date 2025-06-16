@@ -13,7 +13,8 @@
   <section>
     <div class="mainSection">
       <input type="text" [(ngModel)]="selectedHomeProfile">
-      <app-profile [profile]="selectedHomeProfile"></app-profile>
+      <input type="text" [(ngModel)]="message">
+      <app-profile [profile]="selectedHomeProfile" [message]="message"></app-profile>
     </div>
   </section>
 </article>
