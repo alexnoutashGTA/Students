@@ -8,10 +8,11 @@ import {Component, DoCheck, Input, OnChanges, SimpleChanges} from '@angular/core
 })
 export class Profile implements OnChanges, DoCheck{
   @Input() profile = ''; // decorate the property with @Input()
+  @Input() message=''
 
   ngOnChanges(){
     console.log("Changes are detected");
-    this.profile = this.profile + "is a good student"
+
   }
   ngDoCheck(){
 /*
