@@ -15,7 +15,6 @@ export class Messages {
   submitForm(event: Event) {
     event.preventDefault();
 
-    console.log('Form submitted'+" "+this.formMessage.userName+" "+this.formMessage.message);
-    console.log (dateTimestampProvider)
+    console.log('Form submitted'+" "+this.formMessage.userName+" "+this.formMessage.message +this.formMessage.dateTime);
   }
 }
