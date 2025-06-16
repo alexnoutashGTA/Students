@@ -1,7 +1,10 @@
 <p>messages works!</p>
 <form (submit)="submitForm($event)">
-  <input name="username" type="text">
+  <label for="username">Username</label>
+  <input id="username" name="username" type="text" required [(ngModel)]="formMessage.userName">
   <br>
-  <input name="password" type="text">
+  <label for="message">Message</label>
+  <input id="message" name="message" type="text" required [(ngModel)]="formMessage.message">
+  <br>
   <button>Submit</button>
 </form>
