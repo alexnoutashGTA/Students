@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Messages {
 
+  submitForm(event: Event) {
+    event.preventDefault();
+
+    console.log('Form submitted');
+  }
 }
