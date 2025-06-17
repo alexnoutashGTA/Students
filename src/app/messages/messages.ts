@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
+import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvider';
 
 @Component({
@@ -10,6 +11,12 @@ import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvid
 })
 export class Messages {
 
+  profileForm = new FormGroup({
+   userName: new FormControl(''),
+    message: new FormControl(''),
+    date: new FormControl(''),
+
+});
   formMessage: messageObject = new messageObject("", "");
 
   submitForm(event: Event) {

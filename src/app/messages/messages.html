@@ -1,13 +1,8 @@
-<p>messages works!</p>
-<form (submit)="submitForm($event)">
-  <label for="username">Username</label>
-  <input id="username" name="username" type="text" required [(ngModel)]="formMessage.userName">
-  <br>
-  <label for="message">Message</label>
-  <input id="message" name="message" type="text" required [(ngModel)]="formMessage.message">
-  <br>
-  <label for="dateTime">Date and Time:</label>
-  <input id="datetime-local" name="dateTime" type="datetime-local" required [(ngModel)]="formMessage.dateTime">
-
-  <button>Submit</button>
+<form [formGroup]="profileForm">
+  <label for="userName">User Name: </label>
+  <input id="userName" type="text" formControlName="userName" />
+  <label for="messages">Messages: </label>
+  <input id="messages" type="text" formControlName="message" />
+  <label for="date">Date: </label>
+  <input id="date" type="text" formControlName="date" />
 </form>
