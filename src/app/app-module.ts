@@ -10,11 +10,15 @@ import {Profile} from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 =======
 import { Profile } from './profile/profile';
+<<<<<<< HEAD
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 <<<<<<< HEAD
 >>>>>>> 9d7ff11 (Changes made to form so far)
 =======
 >>>>>>> 9d7ff11 (Changes made to form so far)
+=======
+import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+>>>>>>> bb8ade2 (Added Validators to imports)
 
 @NgModule({
   declarations: [
