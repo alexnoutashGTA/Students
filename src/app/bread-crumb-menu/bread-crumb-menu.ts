@@ -23,8 +23,6 @@ export class BreadCrumbMenu {
   linkList: string[] = [];
   labelList: string[] = [];
 
-  @Output() menuClicked = new EventEmitter();
-
 
   constructor(private serv: MenuService) {
     this.homeLabel = serv.HomeLabel;
