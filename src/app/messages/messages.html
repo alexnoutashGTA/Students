@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>messages works!</p>
 
 <form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
@@ -11,4 +12,13 @@
   <input id="date"  type="date" formControlName="date"  />
 
   <button type="submit">Submit form</button>
+=======
+<form [formGroup]="profileForm">
+  <label for="userName">User Name: </label>
+  <input id="userName" type="text" formControlName="userName" />
+  <label for="messages">Messages: </label>
+  <input id="messages" type="text" formControlName="message" />
+  <label for="date">Date: </label>
+  <input id="date" type="text" formControlName="date" />
+>>>>>>> 9d7ff11 (Changes made to form so far)
 </form>
