@@ -16,6 +16,7 @@ import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvid
 export class Messages {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   submitForm=new FormGroup({
 =======
   profileForm = new FormGroup({
@@ -29,6 +30,12 @@ export class Messages {
     date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
     })
 >>>>>>> 1edb8c3 (Sample Forms Test)
+=======
+  profileForm = new FormGroup({
+   userName: new FormControl(''),
+    message: new FormControl(''),
+    date: new FormControl(''),
+>>>>>>> 9d7ff11 (Changes made to form so far)
 
 });
   formMessage: messageObject = new messageObject("", "");
