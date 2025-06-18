@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>messages works!</p>
 
 <form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
@@ -17,6 +18,10 @@
 =======
 >>>>>>> 9d7ff11 (Changes made to form so far)
 <form [formGroup]="profileForm">
+=======
+
+<form (ngSubmit)="submitForm($event)" [formGroup]="profileForm">
+>>>>>>> 111b64c (updated validation)
   <label for="userName">User Name: </label>
   <input id="userName" type="text" formControlName="userName" />
   <label for="messages">Messages: </label>
@@ -45,7 +50,11 @@
 =======
   <label for="date=">Date: </label>
   <input id="date=" type="text" formControlName="date" />
+<<<<<<< HEAD
   <button>Submit</button>
 
 >>>>>>> 5aa2329 (Added button for submit)
+=======
+  <button type="submit" [disabled]="">Submit</button>
+>>>>>>> 111b64c (updated validation)
 </form>

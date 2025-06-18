@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup,Validators,ReactiveFormsModule} from '@angular/forms';
 =======
 import {messageObject} from './messageObject';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvider';
 >>>>>>> 9d7ff11 (Changes made to form so far)
 
@@ -32,6 +32,7 @@ export class Messages {
 >>>>>>> 1edb8c3 (Sample Forms Test)
 =======
   profileForm = new FormGroup({
+<<<<<<< HEAD
    userName: new FormControl(''),
     message: new FormControl(''),
     date: new FormControl(''),
@@ -57,6 +58,21 @@ export class Messages {
     event.preventDefault();
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
 >>>>>>> 1edb8c3 (Sample Forms Test)
+=======
+   userName: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+    message: new FormControl('', Validators.required,),
+    date: new FormControl('', Validators.required),
+    })
+
+
+
+
+
+  submitForm(event: Event) {
+    event.preventDefault();
+
+    console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
+>>>>>>> 111b64c (updated validation)
   }
 
 }
