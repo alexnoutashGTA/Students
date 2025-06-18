@@ -55,5 +55,20 @@ it('First Form Test', () => {
     console.log(ourFormsGroup);
     expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
   })
+<<<<<<< HEAD
 >>>>>>> 1edb8c3 (Sample Forms Test)
+=======
+  it('Second Form Test', () => {
+    let ourFormsGroup = component.profileForm;
+    console.log("ourFormsGroup");
+    console.log(ourFormsGroup);
+    expect(ourFormsGroup.controls.message.value).toEqual('')
+  })
+  it('Third Form Test', () => {
+    let ourFormsGroup = component.profileForm;
+    console.log("ourFormsGroup");
+    console.log(ourFormsGroup);
+    expect(ourFormsGroup.controls.date.value).toBe("");
+  })
+>>>>>>> 5241b0d (Added unit tests for message and date and fixed date format)
 });
