@@ -19,6 +19,9 @@ export class Messages {
   onUserSave() {
     const formValue = this.submitForm.value;
     console.log(formValue);
+=======
+    console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
+>>>>>>> 111b64c (updated validation)
   }
 
 }
