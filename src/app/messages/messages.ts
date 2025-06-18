@@ -20,6 +20,10 @@ export class Messages {
     const formValue = this.submitForm.value;
     console.log(formValue);
 =======
+=======
+  submitForm(event: Event) {
+    event.preventDefault();
+>>>>>>> 1edb8c3 (Sample Forms Test)
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
 >>>>>>> 111b64c (updated validation)
   }
