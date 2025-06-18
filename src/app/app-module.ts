@@ -8,7 +8,11 @@ import { Messages } from './messages/messages';
 import { Detail } from './detail/detail';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 import { Profile } from './profile/profile';
+<<<<<<< HEAD
 import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+=======
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+>>>>>>> 1b32d4d (validation)
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
     imports: [
         BrowserModule,
         AppRoutingModule,
+<<<<<<< HEAD
         FormsModule, ReactiveFormsModule,
+=======
+        FormsModule,ReactiveFormsModule,
+>>>>>>> 1b32d4d (validation)
     ],
   providers: [
     provideBrowserGlobalErrorListeners()
