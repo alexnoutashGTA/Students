@@ -26,4 +26,5 @@ export class Messages {
       let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date)
       this.service.SaveAMessage(newMessage);
   }
+
 }
