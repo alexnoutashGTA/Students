@@ -4,7 +4,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
 import {CommonModule} from '@angular/common';
+<<<<<<< HEAD
 import {ReactiveFormsModule} from '@angular/forms';
+=======
+>>>>>>> 1edb8c3 (Sample Forms Test)
 import {AppModule} from '../app-module';
 
 describe('Messages', () => {
@@ -18,9 +21,13 @@ describe('Messages', () => {
         CommonModule,
         ReactiveFormsModule,
         AppModule
+<<<<<<< HEAD
 
       ]
 
+=======
+      ]
+>>>>>>> 1edb8c3 (Sample Forms Test)
     })
       .compileComponents();
 
@@ -33,6 +40,7 @@ describe('Messages', () => {
     expect(component).toBeTruthy();
   });
 
+<<<<<<< HEAD
 it('First Form Test', () => {
   let ourFormsGroup = component.submitForm;
   console.log("ourFormsGroup");
@@ -40,4 +48,12 @@ it('First Form Test', () => {
   expect(ourFormsGroup.controls.userName.value).toEqual('');
 })
 
+=======
+  it('First Form Test', () => {
+    let ourFormsGroup = component.profileForm;
+    console.log("ourFormsGroup");
+    console.log(ourFormsGroup);
+    expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
+  })
+>>>>>>> 1edb8c3 (Sample Forms Test)
 });
