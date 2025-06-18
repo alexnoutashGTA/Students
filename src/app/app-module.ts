@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 =======
 import { Profile } from './profile/profile';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 <<<<<<< HEAD
 >>>>>>> 9d7ff11 (Changes made to form so far)
@@ -19,6 +20,12 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 =======
 import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 >>>>>>> bb8ade2 (Added Validators to imports)
+=======
+import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+=======
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+>>>>>>> 1b32d4d (validation)
+>>>>>>> 47b1980 (validation)
 
 @NgModule({
   declarations: [
@@ -35,11 +42,18 @@ import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
         AppRoutingModule,FormsModule,ReactiveFormsModule,
 =======
         AppRoutingModule,
+<<<<<<< HEAD
         FormsModule, ReactiveFormsModule,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 9d7ff11 (Changes made to form so far)
 =======
 >>>>>>> 9d7ff11 (Changes made to form so far)
+=======
+=======
+        FormsModule,ReactiveFormsModule,
+>>>>>>> 1b32d4d (validation)
+>>>>>>> 47b1980 (validation)
     ],
   providers: [
     provideBrowserGlobalErrorListeners()
