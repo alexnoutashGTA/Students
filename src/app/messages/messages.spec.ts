@@ -1,17 +1,6 @@
-import {FormGroup, ReactiveFormsModule} from '@angular/forms';
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
-import {CommonModule} from '@angular/common';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {ReactiveFormsModule} from '@angular/forms';
-=======
->>>>>>> 1edb8c3 (Sample Forms Test)
->>>>>>> 0c6752b (Sample Forms Test)
-import {AppModule} from '../app-module';
 
 describe('Messages', () => {
   let component: Messages;
@@ -19,24 +8,9 @@ describe('Messages', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Messages],
-      imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        AppModule
-<<<<<<< HEAD
-      ]
-=======
-<<<<<<< HEAD
-
-      ]
-
-=======
-      ]
->>>>>>> 1edb8c3 (Sample Forms Test)
->>>>>>> 0c6752b (Sample Forms Test)
+      declarations: [Messages]
     })
-      .compileComponents();
+    .compileComponents();
 
     fixture = TestBed.createComponent(Messages);
     component = fixture.componentInstance;
@@ -46,34 +20,4 @@ describe('Messages', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-<<<<<<< HEAD
-
-  it('First Form Test', () => {
-    let ourFormsGroup = component.profileForm;
-    console.log("ourFormsGroup");
-    console.log(ourFormsGroup);
-    expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
-  })
-=======
-
-<<<<<<< HEAD
-it('First Form Test', () => {
-  let ourFormsGroup = component.submitForm;
-  console.log("ourFormsGroup");
-  console.log(ourFormsGroup);
-  expect(ourFormsGroup.controls.userName.value).toEqual('');
-})
-
-<<<<<<< HEAD
->>>>>>> da09f78 (changes)
-=======
-=======
-  it('First Form Test', () => {
-    let ourFormsGroup = component.profileForm;
-    console.log("ourFormsGroup");
-    console.log(ourFormsGroup);
-    expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
-  })
->>>>>>> 1edb8c3 (Sample Forms Test)
->>>>>>> 0c6752b (Sample Forms Test)
 });
