@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
 import {CommonModule} from '@angular/common';
+<<<<<<< HEAD
 import {ReactiveFormsModule} from '@angular/forms';
 
 import {AppModule} from '../app-module';
@@ -20,6 +21,9 @@ describe('Messages', () => {
         AppModule
       ]
 
+=======
+      ]
+>>>>>>> 1edb8c3 (Sample Forms Test)
     })
       .compileComponents();
 
