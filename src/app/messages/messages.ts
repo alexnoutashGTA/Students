@@ -21,6 +21,7 @@ export class Messages {
 =======
   profileForm = new FormGroup({
 <<<<<<< HEAD
+<<<<<<< HEAD
    userName: new FormControl(''),
     message: new FormControl(''),
     date: new FormControl(''),
@@ -60,6 +61,9 @@ export class Messages {
 >>>>>>> 1edb8c3 (Sample Forms Test)
 =======
    userName: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+=======
+   userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
+>>>>>>> 1edb8c3 (Sample Forms Test)
     message: new FormControl('', Validators.required,),
     date: new FormControl('', Validators.required),
     })
@@ -70,7 +74,6 @@ export class Messages {
 
   submitForm(event: Event) {
     event.preventDefault();
-
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
 >>>>>>> 111b64c (updated validation)
   }
