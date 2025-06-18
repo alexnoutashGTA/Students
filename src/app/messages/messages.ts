@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvider';
 
 @Component({
@@ -12,16 +12,18 @@ import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvid
 export class Messages {
 
   profileForm = new FormGroup({
-   userName: new FormControl(''),
-    message: new FormControl(''),
-    date: new FormControl(''),
+   userName: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+    message: new FormControl('', Validators.required,),
+    date: new FormControl('', Validators.required),
+    })
 
-});
-  formMessage: messageObject = new messageObject("", "");
+
+
+
 
   submitForm(event: Event) {
     event.preventDefault();
 
-    console.log('Form submitted'+" "+this.formMessage.userName+" "+this.formMessage.message +this.formMessage.dateTime);
+    console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
   }
 }
