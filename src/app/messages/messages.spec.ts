@@ -4,6 +4,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
 import {CommonModule} from '@angular/common';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {ReactiveFormsModule} from '@angular/forms';
+=======
+>>>>>>> 1edb8c3 (Sample Forms Test)
+>>>>>>> 0c6752b (Sample Forms Test)
 import {AppModule} from '../app-module';
 
 describe('Messages', () => {
@@ -17,7 +24,17 @@ describe('Messages', () => {
         CommonModule,
         ReactiveFormsModule,
         AppModule
+<<<<<<< HEAD
       ]
+=======
+<<<<<<< HEAD
+
+      ]
+
+=======
+      ]
+>>>>>>> 1edb8c3 (Sample Forms Test)
+>>>>>>> 0c6752b (Sample Forms Test)
     })
       .compileComponents();
 
@@ -39,6 +56,7 @@ describe('Messages', () => {
   })
 =======
 
+<<<<<<< HEAD
 it('First Form Test', () => {
   let ourFormsGroup = component.submitForm;
   console.log("ourFormsGroup");
@@ -46,5 +64,16 @@ it('First Form Test', () => {
   expect(ourFormsGroup.controls.userName.value).toEqual('');
 })
 
+<<<<<<< HEAD
 >>>>>>> da09f78 (changes)
+=======
+=======
+  it('First Form Test', () => {
+    let ourFormsGroup = component.profileForm;
+    console.log("ourFormsGroup");
+    console.log(ourFormsGroup);
+    expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
+  })
+>>>>>>> 1edb8c3 (Sample Forms Test)
+>>>>>>> 0c6752b (Sample Forms Test)
 });

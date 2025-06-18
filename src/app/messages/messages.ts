@@ -53,7 +53,7 @@ export class Messages {
     date:    new FormControl("",[Validators.required]),
 =======
   profileForm = new FormGroup({
-   userName: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+   userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
     date: new FormControl('', Validators.required),
     })
@@ -63,6 +63,7 @@ export class Messages {
 
 >>>>>>> 111b64c (updated validation)
 
+<<<<<<< HEAD
   });
 
 <<<<<<< HEAD
@@ -73,6 +74,10 @@ export class Messages {
 >>>>>>> 1b32d4d (validation)
 =======
 =======
+=======
+  submitForm(event: Event) {
+    event.preventDefault();
+>>>>>>> 1edb8c3 (Sample Forms Test)
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
 >>>>>>> 111b64c (updated validation)
 >>>>>>> 0e8b983 (updated validation)
