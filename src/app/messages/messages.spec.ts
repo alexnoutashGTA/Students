@@ -1,6 +1,10 @@
+import {FormGroup, ReactiveFormsModule} from '@angular/forms';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
+import {CommonModule} from '@angular/common';
+import {AppModule} from '../app-module';
 
 describe('Messages', () => {
   let component: Messages;
@@ -8,9 +12,14 @@ describe('Messages', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Messages]
+      declarations: [Messages],
+      imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        AppModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(Messages);
     component = fixture.componentInstance;
@@ -20,4 +29,11 @@ describe('Messages', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('First Form Test', () => {
+    let ourFormsGroup = component.profileForm;
+    console.log("ourFormsGroup");
+    console.log(ourFormsGroup);
+    expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
+  })
 });

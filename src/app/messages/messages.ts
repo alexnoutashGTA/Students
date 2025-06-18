@@ -12,7 +12,7 @@ import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvid
 export class Messages {
 
   profileForm = new FormGroup({
-   userName: new FormControl('', [Validators.required, Validators.maxLength(6)]),
+   userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
     date: new FormControl('', Validators.required),
     })
@@ -23,7 +23,6 @@ export class Messages {
 
   submitForm(event: Event) {
     event.preventDefault();
-
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
   }
 }
