@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {messageObject} from './messageObject';
-import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvider';
+import {FormControl, FormGroup,Validators,ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-messages',
@@ -10,11 +9,17 @@ import {dateTimestampProvider} from 'rxjs/internal/scheduler/dateTimestampProvid
 })
 export class Messages {
 
-  formMessage: messageObject = new messageObject("", "");
+  submitForm:FormGroup=new FormGroup({
 
-  submitForm(event: Event) {
-    event.preventDefault();
+    userName:new FormControl("",[Validators.required]),
+    message: new FormControl("",[Validators.required]),
+    date:    new FormControl("",[Validators.required]),
 
-    console.log('Form submitted'+" "+this.formMessage.userName+" "+this.formMessage.message +this.formMessage.dateTime);
+  });
+
+  onUserSave(){
+    const formValue=this.submitForm.value;
+    console.log(formValue);
   }
+
 }
