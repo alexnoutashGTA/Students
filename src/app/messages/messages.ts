@@ -26,7 +26,7 @@ export class Messages {
 =======
    userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
-    date: new FormControl('', Validators.required),
+    date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
     })
 >>>>>>> 1edb8c3 (Sample Forms Test)
 
