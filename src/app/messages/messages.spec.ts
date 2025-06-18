@@ -1,3 +1,5 @@
+import {FormGroup, ReactiveFormsModule} from '@angular/forms';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Messages } from './messages';
@@ -20,7 +22,7 @@ describe('Messages', () => {
       ]
 
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(Messages);
     component = fixture.componentInstance;
