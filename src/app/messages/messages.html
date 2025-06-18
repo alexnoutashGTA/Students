@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>messages works!</p>
 
 <form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
@@ -22,6 +23,8 @@
 =======
 =======
 >>>>>>> 47b1980 (validation)
+=======
+>>>>>>> 9303344 (updated validation)
 
 <form (ngSubmit)="submitForm($event)" [formGroup]="profileForm">
 >>>>>>> 111b64c (updated validation)
@@ -63,6 +66,9 @@
 >>>>>>> 111b64c (updated validation)
 =======
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 0e8b983 (updated validation)
 <p>messages works!</p>
 
 <form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
@@ -76,6 +82,31 @@
   <input id="date"  type="date" formControlName="date"  />
 
   <button type="submit">Submit form</button>
+<<<<<<< HEAD
 >>>>>>> 1b32d4d (validation)
+<<<<<<< HEAD
 >>>>>>> 47b1980 (validation)
+=======
+=======
+=======
+<form [formGroup]="profileForm">
+=======
+
+<form (ngSubmit)="submitForm($event)" [formGroup]="profileForm">
+>>>>>>> 111b64c (updated validation)
+  <label for="userName">User Name: </label>
+  <input id="userName" type="text" formControlName="userName" />
+  <label for="messages">Messages: </label>
+  <input id="messages" type="text" formControlName="message" />
+  <label for="date=">Date: </label>
+  <input id="date=" type="text" formControlName="date" />
+<<<<<<< HEAD
+  <button>Submit</button>
+
+>>>>>>> 5aa2329 (Added button for submit)
+=======
+  <button type="submit" [disabled]="">Submit</button>
+>>>>>>> 111b64c (updated validation)
+>>>>>>> 0e8b983 (updated validation)
+>>>>>>> 9303344 (updated validation)
 </form>
