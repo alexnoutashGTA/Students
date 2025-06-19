@@ -16,6 +16,7 @@ import {FormControl, FormGroup,Validators,ReactiveFormsModule} from '@angular/fo
 export class Messages {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   profileForm = new FormGroup({
    userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
@@ -31,6 +32,9 @@ export class Messages {
     console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
 =======
   submitForm:FormGroup=new FormGroup({
+=======
+  submitForm=new FormGroup({
+>>>>>>> 7a209af (fixed unit test)
 
     userName:new FormControl("",[Validators.required]),
     message: new FormControl("",[Validators.required]),
