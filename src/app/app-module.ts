@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { SideMenu } from './side-menu/side-menu';
 import { Home } from './home/home';
-import { Messages } from './messages/messages';
 import { Detail } from './detail/detail';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
-import { Profile } from './profile/profile';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {Profile} from './profile/profile';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,15 +16,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     App,
     SideMenu,
     Home,
-    Messages,
     Detail,
     Profile
 
   ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
-        FormsModule,ReactiveFormsModule,
+        AppRoutingModule,FormsModule,ReactiveFormsModule,
     ],
   providers: [
     provideBrowserGlobalErrorListeners()
