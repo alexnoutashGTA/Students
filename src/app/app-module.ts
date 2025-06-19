@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     Messages,
     Detail,
     Profile
+
   ],
     imports: [
         BrowserModule,
