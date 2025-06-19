@@ -43,7 +43,7 @@ it('First Form Test', () => {
   let ourFormsGroup = component.submitForm;
   console.log("ourFormsGroup");
   console.log(ourFormsGroup);
-  expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
+  expect(ourFormsGroup.controls.userName.value).toEqual('');
 })
 
 >>>>>>> da09f78 (changes)
