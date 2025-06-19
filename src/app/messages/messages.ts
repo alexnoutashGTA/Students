@@ -27,10 +27,13 @@ export class Messages {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   submitForm=new FormGroup({
 =======
 =======
 >>>>>>> 47b1980 (validation)
+=======
+>>>>>>> 7fe1def (fixed unit test)
   profileForm = new FormGroup({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +95,9 @@ export class Messages {
 =======
 =======
   submitForm:FormGroup=new FormGroup({
+=======
+  submitForm=new FormGroup({
+>>>>>>> 7a209af (fixed unit test)
 
     userName:new FormControl("",[Validators.required]),
     message: new FormControl("",[Validators.required]),
