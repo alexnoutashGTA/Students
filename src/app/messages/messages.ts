@@ -9,7 +9,7 @@ import {FormControl, FormGroup,Validators,ReactiveFormsModule} from '@angular/fo
 })
 export class Messages {
 
-  submitForm:FormGroup=new FormGroup({
+  submitForm=new FormGroup({
 
     userName:new FormControl("",[Validators.required]),
     message: new FormControl("",[Validators.required]),
