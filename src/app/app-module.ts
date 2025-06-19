@@ -4,11 +4,17 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { SideMenu } from './side-menu/side-menu';
 import { Home } from './home/home';
+<<<<<<< HEAD
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 <<<<<<< HEAD
 import {Profile} from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 =======
+=======
+import { Detail } from './detail/detail';
+import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
+<<<<<<< HEAD
+>>>>>>> bc4c786 (WIP on MaiaAngular)
 import { Profile } from './profile/profile';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,7 +31,14 @@ import {FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 =======
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 >>>>>>> 1b32d4d (validation)
+<<<<<<< HEAD
 >>>>>>> 47b1980 (validation)
+=======
+=======
+import {Profile} from './profile/profile';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+>>>>>>> fdc8a96 (WIP on MaiaAngular)
+>>>>>>> bc4c786 (WIP on MaiaAngular)
 
 @NgModule({
   declarations: [
@@ -33,14 +46,21 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     App,
     SideMenu,
     Home,
+<<<<<<< HEAD
+=======
+    Detail,
+>>>>>>> bc4c786 (WIP on MaiaAngular)
     Profile
 
   ],
     imports: [
         BrowserModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
         AppRoutingModule,FormsModule,ReactiveFormsModule,
 =======
+=======
+>>>>>>> bc4c786 (WIP on MaiaAngular)
         AppRoutingModule,
 <<<<<<< HEAD
         FormsModule, ReactiveFormsModule,
@@ -53,7 +73,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 =======
         FormsModule,ReactiveFormsModule,
 >>>>>>> 1b32d4d (validation)
+<<<<<<< HEAD
 >>>>>>> 47b1980 (validation)
+=======
+=======
+        AppRoutingModule,FormsModule,ReactiveFormsModule,
+>>>>>>> fdc8a96 (WIP on MaiaAngular)
+>>>>>>> bc4c786 (WIP on MaiaAngular)
     ],
   providers: [
     provideBrowserGlobalErrorListeners()

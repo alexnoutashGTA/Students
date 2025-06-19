@@ -12,9 +12,17 @@ const routes: Routes= MyRoutes;
       path: '',
       component: Home,
     },
+<<<<<<< HEAD
 
     { path: 'messages', loadChildren: () => import('./lazyModules/lazy-messages/lazy-messages-module').then(m => m.LazyMessagesModule) },
     { path: 'detail', loadChildren: () => import('./lazyModules/lazy-detail/lazy-detail-module').then(m => m.LazyDetailModule) },
+=======
+    {
+      path: 'detail',
+      component: Detail,
+    },
+    { path: 'messages', loadChildren: () => import('./lazyModules/lazy-messages/lazy-messages-module').then(m => m.LazyMessagesModule) },
+>>>>>>> bc4c786 (WIP on MaiaAngular)
   ])],
   exports: [RouterModule]
 })
