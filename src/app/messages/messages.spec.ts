@@ -30,11 +30,12 @@ describe('Messages', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+
 it('First Form Test', () => {
-  let ourFormsGroup = component.profileForm;
+  let ourFormsGroup = component.submitForm;
   console.log("ourFormsGroup");
   console.log(ourFormsGroup);
-  expect(ourFormsGroup.controls.userName.value).toEqual('Alex')
+  expect(ourFormsGroup.controls..value).toEqual('Alex')
 })
 
+});
