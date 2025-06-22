@@ -1,0 +1,15 @@
+.message {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .message {
+    width: 95%;
+    font-size: 14px;
+  }
+}
