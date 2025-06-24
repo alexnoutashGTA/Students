@@ -13,6 +13,9 @@ export class Home implements OnInit, OnChanges {
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
   message: string = '';
+  totalPageNumbers: number = 0;
+  isLastPage: boolean = false;
+  isFirstPage: boolean = true;
 
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
@@ -22,8 +25,7 @@ export class Home implements OnInit, OnChanges {
   }
 
   ngOnInit(){
-      /*console.log("Home Page Initialized");
-      console.log("Test number: " +this.testNumber);*/
+    this.totalPageNumbers = this.imagesLinks.length / 5
   }
 
   ngOnChanges(){
@@ -36,7 +38,7 @@ export class Home implements OnInit, OnChanges {
     this.service.HomePageNumberDecremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
-
+    this.isLastPage = false
   }
 
   rightButtonClicked() {
@@ -44,5 +46,8 @@ export class Home implements OnInit, OnChanges {
     this.service.HomePageNumberIncremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber*5, (pageNumber+1)*5);
+    if (pageNumber > this.totalPageNumbers){
+      this.isLastPage = true;
+    }
   }
 }
