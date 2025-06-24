@@ -16,6 +16,7 @@ export class Home implements OnInit, OnChanges {
   totalPageNumbers: number = 0;
   isLastPage: boolean = false;
   isFirstPage: boolean = true;
+  nextButtonStyle: object = {};
 
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
@@ -26,11 +27,13 @@ export class Home implements OnInit, OnChanges {
 
   ngOnInit(){
     this.totalPageNumbers = this.imagesLinks.length / 5
+
   }
 
   ngOnChanges(){
    console.log("Home Page changes detected");
     console.log("selectedHomeProfile " +this.selectedHomeProfile);
+
   }
 
     leftButtonClicked() {
@@ -43,6 +46,10 @@ export class Home implements OnInit, OnChanges {
       this.isFirstPage = true;
     }
       this.isLastPage = false;
+      this.nextButtonStyle = {
+        'opacity': this.isFirstPage? '0.6' : '1.0',
+        'cursor': this.isFirstPage ? 'not-allowed' : 'allowed',
+      };
   }
 
   rightButtonClicked() {
@@ -54,5 +61,9 @@ export class Home implements OnInit, OnChanges {
       this.isLastPage = true;
     }
     this.isFirstPage = false;
+    this.nextButtonStyle = {
+      'opacity': this.isFirstPage? '0.6' : '1.0',
+      'cursor': this.isFirstPage ? 'not-allowed' : 'allowed',
+    };
   }
 }
