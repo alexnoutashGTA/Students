@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="buttons">
-    <button *ngIf="isFirstPage" (click)="leftButtonClicked()">Previous</button>
+    <button *ngIf="!isFirstPage" (click)="leftButtonClicked()">Previous</button>
     <button *ngIf="!isLastPage" (click)="rightButtonClicked()">Next</button>
     </div>
   </section>

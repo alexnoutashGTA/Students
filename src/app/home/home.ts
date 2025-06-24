@@ -38,11 +38,11 @@ export class Home implements OnInit, OnChanges {
     this.service.HomePageNumberDecremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
-    if (pageNumber ==1) {
-      this.isLastPage = false;
+    if (pageNumber ==0) {
+
       this.isFirstPage = true;
     }
-
+      this.isLastPage = false;
   }
 
   rightButtonClicked() {
@@ -53,5 +53,6 @@ export class Home implements OnInit, OnChanges {
     if (pageNumber > this.totalPageNumbers){
       this.isLastPage = true;
     }
+    this.isFirstPage = false;
   }
 }
