@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages</title>
+  <link rel="stylesheet" href="messages.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Messages</h1>
+    <div class="message">This is the first message.</div>
+    <div class="message">Here is another message.</div>
+    <div class="message">Responsive design is working!</div>
+  </div>
+</body>
+</html>

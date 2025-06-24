@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+}
+
+.message {
+  padding: 15px;
+  background: #e0f7fa;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .message {
+    font-size: 14px;
+    padding: 10px;
+    background: #fff3e0;
+  }
+}
