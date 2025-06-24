@@ -11,21 +11,14 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 export class Messages {
 
   submitForm = new FormGroup({
-   userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
+    userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
     date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
-    })
+  })
 
   onUserSave() {
     const formValue = this.submitForm.value;
     console.log(formValue);
-=======
-=======
-  submitForm(event: Event) {
-    event.preventDefault();
->>>>>>> 1edb8c3 (Sample Forms Test)
-    console.log('Form submitted'+" "+this.profileForm.controls['userName'].value+" "+this.profileForm.controls['message'].value);
->>>>>>> 111b64c (updated validation)
   }
 
 }
