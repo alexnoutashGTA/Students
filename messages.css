@@ -1,15 +1,38 @@
-.message {
-  width: 80%;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Basic Styles */
+body {
   font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
 }
 
-@media (max-width: 600px) {
+.message {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: white;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ?? Responsive Design with Media Query */
+@media screen and (max-width: 600px) {
   .message {
-    width: 95%;
+    padding: 10px;
     font-size: 14px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
   }
 }
