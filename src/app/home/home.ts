@@ -15,6 +15,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
   message: string = '';
   totalPageNumbers: number = 0;
   nextButtonStyle: object = {};
+  previousButtonStyle: object = {};
   isFirstPage = signal(true);
   isLastPage = signal(false);
 
@@ -38,8 +39,13 @@ export class Home implements OnInit, OnChanges, DoCheck {
   }
   ngDoCheck(){
     this.nextButtonStyle = {
-           'opacity': this.isFirstPage()? '0.6' : '1.0',
-           'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
+      'opacity': this.isFirstPage() ? '0.6' : '1.0',
+      'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
+    }
+      this.previousButtonStyle = {
+        'opacity': this.isLastPage()? '0.6' : '1.0',
+        'cursor': this.isLastPage() ? 'not-allowed' : 'allowed',
+
     };
   }
 
