@@ -7,7 +7,7 @@
     </div>
     <div class="buttons">
     <button [ngStyle]="nextButtonStyle" (click)="leftButtonClicked()">Previous</button>
-    <button *ngIf="!isLastPage" (click)="rightButtonClicked()">Next</button>
+    <button *ngIf="!isLastPage()" (click)="rightButtonClicked()">Next</button>
     </div>
   </section>
   <section>

@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component, DoCheck, OnChanges, OnInit, signal} from '@angular/core';
 import {MainService} from '../services/main-service';
 
 @Component({
@@ -7,16 +7,17 @@ import {MainService} from '../services/main-service';
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home implements OnInit, OnChanges {
+export class Home implements OnInit, OnChanges, DoCheck {
 
   imagesLinks: string[] = []
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
   message: string = '';
   totalPageNumbers: number = 0;
-  isLastPage: boolean = false;
-  isFirstPage: boolean = true;
   nextButtonStyle: object = {};
+  isFirstPage = signal(true);
+  isLastPage = signal(false);
+
 
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
@@ -35,6 +36,12 @@ export class Home implements OnInit, OnChanges {
     console.log("selectedHomeProfile " +this.selectedHomeProfile);
 
   }
+  ngDoCheck(){
+    this.nextButtonStyle = {
+           'opacity': this.isFirstPage()? '0.6' : '1.0',
+           'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
+    };
+  }
 
     leftButtonClicked() {
     console.log('leftButtonClicked');
@@ -43,13 +50,10 @@ export class Home implements OnInit, OnChanges {
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
     if (pageNumber ==0) {
 
-      this.isFirstPage = true;
+      this.isFirstPage.set(true)
     }
-      this.isLastPage = false;
-      this.nextButtonStyle = {
-        'opacity': this.isFirstPage? '0.6' : '1.0',
-        'cursor': this.isFirstPage ? 'not-allowed' : 'allowed',
-      };
+      this.isLastPage.set(false)
+
   }
 
   rightButtonClicked() {
@@ -58,12 +62,9 @@ export class Home implements OnInit, OnChanges {
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber*5, (pageNumber+1)*5);
     if (pageNumber > this.totalPageNumbers){
-      this.isLastPage = true;
+      this.isLastPage.set(true);
     }
-    this.isFirstPage = false;
-    this.nextButtonStyle = {
-      'opacity': this.isFirstPage? '0.6' : '1.0',
-      'cursor': this.isFirstPage ? 'not-allowed' : 'allowed',
-    };
+    this.isFirstPage.set(false);
+
   }
 }
