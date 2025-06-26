@@ -1,19 +1,31 @@
-<p>messages works!</p>
+<h2>Messages</h2>
 
-<form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
-  <label for="username">Username</label>
-  <input id="username" type="text" formControlName="userName"  />
-  <br>
-  <label for="message">Message</label>
-  <input id="message"  type="text"  formControlName="message"  />
-  <br>
-  <label for="date">Date and Time</label>
-  <input id="date"  type="date" formControlName="date"  />
+<form (ngSubmit)="onUserSave()" [formGroup]="submitForm" class="message-form">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input id="username" type="text" formControlName="userName" />
+  </div>
 
-  <button type="submit">Submit form</button>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <input id="message" type="text" formControlName="message"  />
+  </div>
+
+  <div class="form-group">
+    <label for="date">Date and Time</label>
+    <input id="date" type="date" formControlName="date" />
+  </div>
+
+  <button type="submit" class="submit-btn">Send Message</button>
 </form>
-<div class="avatar" *ngFor="let item of service.messagesList; index as i">
-  <p>{{ item.userName }}</p>
-  <p>{{ item.message }}</p>
-  <p>{{item.dateTime}}</p>
+
+<div class="message-list">
+  <h3>Previous Messages</h3>
+  <div class="avatar" *ngFor="let item of service.messagesList; index as i">
+    <div class="header-line">
+      <strong>{{ item.userName }}</strong>
+      <span class="date">{{ item.dateTime }}</span>
+    </div>
+    <p>{{ item.message }}</p>
+  </div>
 </div>
