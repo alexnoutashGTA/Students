@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { importProvidersFrom } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    MessagesComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
-    // ✅ Standalone components are imported here
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
