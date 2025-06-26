@@ -23,18 +23,18 @@ export class Home implements OnInit, OnChanges, DoCheck {
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
     this.imagesLinks = service.ImagesLinks.slice(0, 5);
-    console.log("Test number: " +this.testNumber);
+    console.log("Test number: " + this.testNumber);
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.totalPageNumbers = this.imagesLinks.length / 5
 
   }
 
-  ngOnChanges(){
-   console.log("Home Page changes detected");
-    console.log("selectedHomeProfile " +this.selectedHomeProfile);
+  ngOnChanges() {
+    console.log("Home Page changes detected");
+    console.log("selectedHomeProfile " + this.selectedHomeProfile);
 
   }
   ngDoCheck(){
@@ -48,12 +48,24 @@ export class Home implements OnInit, OnChanges, DoCheck {
     };
   }
 
-    leftButtonClicked() {
+  ngDoCheck() {
+    this.nextButtonStyle = {
+      'opacity': this.isFirstPage() ? '0.6' : '1.0',
+      'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
+    }
+    this.previousButtonStyle = {
+      'opacity': this.isLastPage() ? '0.6' : '1.0',
+      'cursor': this.isLastPage() ? 'not-allowed' : 'allowed',
+    };
+
+  }
+
+  leftButtonClicked() {
     console.log('leftButtonClicked');
     this.service.HomePageNumberDecremented();
     let pageNumber: number = this.service.HomePageNumber;
     this.imagesLinks = this.service.ImagesLinks.slice(pageNumber * 5, (pageNumber + 1) * 5);
-    if (pageNumber ==0) {
+    if (pageNumber == 0) {
 
       this.isFirstPage.set(true)
     }
