@@ -11,7 +11,7 @@ import {MainService} from "../services/main-service";
 })
 export class Messages {
 
-    constructor(private service:MainService) {
+    constructor(protected service:MainService) {
     }
 
   submitForm = new FormGroup({

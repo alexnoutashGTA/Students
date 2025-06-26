@@ -12,3 +12,8 @@
 
   <button type="submit">Submit form</button>
 </form>
+<div class="avatar" *ngFor="let item of service.messagesList; index as i">
+  <p>{{ item.userName }}</p>
+  <p>{{ item.message }}</p>
+  <p>{{item.dateTime}}</p>
+</div>

@@ -4,3 +4,12 @@ input {
   height: 100%;
   padding: 10px;
 }
+.avatar{
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+
+
+}
