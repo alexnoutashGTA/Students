@@ -1,1 +1,7 @@
-<p>chat works!</p>
+<div class="chat-body">
+  <div *ngFor="let message of messages" class="chat-message">
+    <span class="user-name">You:</span>
+    <span class="message-content">{{ message }}</span>
+  </div>
+</div>
+
