@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessagesService } from './messages.service';
 
 @Component({
   selector: 'app-messages',
@@ -6,9 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent {
-  messages: string[] = [
-    'Welcome to our Angular app!',
-    'You have 3 new notifications.',
-    'Check back soon for updates.'
-  ];
+  newMessage: string = '';
+  messages: string[] = [];
+
+  constructor(private messageService: MessagesService) {}
+
+  addMessage() {
+    if (this.newMessage.trim()) {
+      this.messageService.addMessage(this.newMessage);
+      this.newMessage = '';
+      this.refreshMessages();
+    }
+  }
+
+  refreshMessages() {
+    this.messages = this.messageService.getMessages();
+  }
+
+  ngOnInit() {
+    this.refreshMessages();
+  }
 }
