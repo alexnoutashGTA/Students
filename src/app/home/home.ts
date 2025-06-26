@@ -15,9 +15,9 @@ export class Home implements OnInit, OnChanges, DoCheck {
   message: string = '';
   totalPageNumbers: number = 0;
   nextButtonStyle: object = {};
+  previousButtonStyle: object = {};
   isFirstPage = signal(true);
   isLastPage = signal(false);
-
 
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
@@ -35,12 +35,6 @@ export class Home implements OnInit, OnChanges, DoCheck {
     console.log("Home Page changes detected");
     console.log("selectedHomeProfile " + this.selectedHomeProfile);
 
-  }
-  ngDoCheck(){
-    this.nextButtonStyle = {
-           'opacity': this.isFirstPage()? '0.6' : '1.0',
-           'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
-    };
   }
 
   ngDoCheck() {
