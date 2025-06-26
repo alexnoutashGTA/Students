@@ -19,7 +19,6 @@ export class Home implements OnInit, OnChanges, DoCheck {
   isFirstPage = signal(true);
   isLastPage = signal(false);
 
-
   constructor(private service: MainService) {
     console.log('home Page Constructor is called');
     this.imagesLinks = service.ImagesLinks.slice(0, 5);
