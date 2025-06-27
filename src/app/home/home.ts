@@ -54,7 +54,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
         'opacity': this.isLastPage()? '0.6' : '1.0',
         'cursor': this.isLastPage() ? 'not-allowed' : 'allowed',
     };
-  }
+
 
     this.previousbuttonStyle={
       'opacity':this.isLastPage()?'0.6':'1.0',
