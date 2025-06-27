@@ -5,8 +5,8 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 @Component({
   selector: 'app-messages',
   standalone: false,
-  templateUrl: './messages.html',
-  styleUrl: './messages.css'
+  templateUrl:'./messages.html',
+  styleUrl: '/messages.css'
 })
 export class Messages {
 
