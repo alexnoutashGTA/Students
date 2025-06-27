@@ -6,8 +6,8 @@ import {MainService} from "../services/main-service";
 @Component({
   selector: 'app-messages',
   standalone: false,
-  templateUrl: './messages.html',
-  styleUrl: './messages.css'
+  templateUrl:'./messages.html',
+  styleUrl: '/messages.css'
 })
 export class Messages {
 
