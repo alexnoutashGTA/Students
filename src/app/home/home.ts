@@ -17,6 +17,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
   nextButtonStyle: object = {};
   isFirstPage = signal(true);
   isLastPage = signal(false);
+  previousbuttonStyle:object = {};
 
 
   constructor(private service: MainService) {
@@ -41,7 +42,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
            'opacity': this.isFirstPage()? '0.6' : '1.0',
            'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
     };
-  }
+
 
     this.previousbuttonStyle={
       'opacity':this.isLastPage()?'0.6':'1.0',
