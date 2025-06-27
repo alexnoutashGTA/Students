@@ -1,0 +1,21 @@
+.messages-container {
+  padding: 16px;
+  max-width: 500px;
+  margin: 20px auto;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+form {
+  margin-bottom: 12px;
+}
+
+input {
+  padding: 8px;
+  width: 70%;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 10px;
+}
