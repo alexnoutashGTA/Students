@@ -56,3 +56,10 @@ h1 {
 footer {
   background-color: blue;
 }
+
+input {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
