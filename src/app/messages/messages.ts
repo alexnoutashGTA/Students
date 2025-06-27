@@ -19,6 +19,7 @@ export class Messages {
     message: new FormControl('', Validators.required,),
     date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
     })
+  private savedData: any;
 
   onUserSave() {
     const formValue  = this.submitForm.value;
