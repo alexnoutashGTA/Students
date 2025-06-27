@@ -1,34 +1,25 @@
 <p>messages works!</p>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Messages - Vishal Portal</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-</head>
-<body>
-<!-- Breadcrumb -->
-<nav class="breadcrumb">
-  <a href="index.html">Home</a> > <a href="messages.html">Messages</a>
-</nav>
+<form (ngSubmit)="onUserSave()" [formGroup]="submitForm" class="message-form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="userName" />
+    </div>
 
-<!-- Main Container -->
-<div class="messages-container">
+    <div class="form-group">
+        <label for="message">Message</label>
+        <input id="message" type="text" formControlName="message"  />
+    </div>
 
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="messages.html" class="active"><i class="fa fa-envelope"></i> Messages</a></li>
-      <li><a href="details.html"><i class="fa fa-user"></i> Details</a></li>
-      <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-      <li><a href="#"><i class="fa fa-info-circle"></i> Help</a></li>
-    </ul>
-  </nav>
+    <div class="form-group">
+        <label for="date">Date and Time</label>
+        <input id="date" type="date" formControlName="date" />
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
 
   <!-- Chat Section -->
   <main class="chat-section">
@@ -64,6 +55,4 @@
       </section>
     </div>
   </main>
-</div>
-</body>
-</html>
+

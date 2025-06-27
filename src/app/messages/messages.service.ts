@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {messageObject} from './messageObject';
 
 @Injectable({
   providedIn: 'root'
@@ -6,11 +7,11 @@ import { Injectable } from '@angular/core';
 export class MessageService {
   private savedMessage: any;
 
-  saveMessage(data: any) {
-    this.savedMessage = data;
-  }
-
   getMessage() {
     return this.savedMessage;
+  }
+  messagesList: messageObject[] = [];
+  SaveAMessage(newMessage: messageObject) {
+    this.messagesList.push(newMessage);
   }
 }

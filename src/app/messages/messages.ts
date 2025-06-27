@@ -18,10 +18,13 @@ export class Messages {
     })
   private savedData: any;
 
-  onUserSave() {
-    const formValue = this.submitForm.value;
-    console.log(formValue);
-  }
+
+    onUserSave() {
+        const formValue  = this.submitForm.value;
+        // @ts-ignore
+        let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date)
+        this.messageService.SaveAMessage(newMessage);
+    }
   constructor(private messageService: MessageService) {
     this.savedData = this.messageService.getMessage();
 
