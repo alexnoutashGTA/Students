@@ -1,0 +1,12 @@
+<div class="messages-container">
+  <h2>Messages</h2>
+
+  <form (ngSubmit)="addMessage()">
+    <input [(ngModel)]="newMessage" name="messageInput" required placeholder="Enter message" />
+    <button type="submit">Add Message</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let msg of messages">{{ msg }}</li>
+  </ul>
+</div>
