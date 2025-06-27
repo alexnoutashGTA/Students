@@ -7,7 +7,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Messages - Vishal Portal</title>
-  <link rel="stylesheet" href="css/messages.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
@@ -68,16 +67,3 @@
 </div>
 </body>
 </html>
-
-<form (ngSubmit)="onUserSave()" [formGroup] = "submitForm">
-  <label for="username">Username</label>
-  <input id="username" type="text" formControlName="userName"  />
-  <br>
-  <label for="message">Message</label>
-  <input id="message"  type="text"  formControlName="message"  />
-  <br>
-  <label for="date">Date and Time</label>
-  <input id="date"  type="date" formControlName="date"  />
-
-  <button type="submit">Submit form</button>
-</form>
