@@ -12,51 +12,29 @@
 
   <button type="submit">Submit form</button>
 </form>
-<div class="avatar" *ngFor="let item of service.messagesList; index as i">
-  <p>{{ item.userName }}</p>
-  <p>{{ item.message }}</p>
-  <p>{{item.dateTime}}</p>
-</div>
+<br>
+<br>
 
-<html>
 <body>
 <div class="container">
   <div class="chatbox">
     <div class="col-1">
-      <div class="msg-row">
+      <div *ngFor="let item of service.messagesList; index as i" class="msg-row">
         <div class="msg-text">
-          <h2>Amal Taleb</h2>
-          <p>Good morning everyone</p>
+          <h2>{{item.userName}}</h2>
+          <p>{{item.message}}</p>
+            <h3>{{item.dateTime}}</h3>
         </div>
-        <img src="images/image1.png" class="msg-img">
+        <img ngSrc="../images/image1.png" class="msg-img" height="348" width="348" alt="">
       </div>
-      <div class="msg-row msg-row2">
-        <img src="images/image2.png" class="msg-img">
-        <div class="msg-text">
-          <h2>Alex Noutash</h2>
-          <p>Answer the daily question</p>
-        </div>
-
-      </div>
-      <div class="msg-row">
-        <div class="msg-text">
-          <h2>Amal Taleb</h2>
-          <p>Ok sure</p>
-        </div>
-        <img src="images/image1.png" class="msg-img">
-      </div>
-      <input type="text" placeholder="Type your message...">
     </div>
     <div class="col-2">
-      <h3>Friends List</h3>
+      <h3>Friends List</h3>i
       <ul>
-        <li class="online">Theresa Macdonald</li>
-        <li class="offline">Vishal Sagar</li>
-        <li class="busy">Dalbir Sandhu</li>
-        <li class="online">Maia Tsintsarashvili</li>
+        <li *ngFor="let item of service.messagesList; index as i" class="online">{{item.userName}}</li>
+
       </ul>
     </div>
   </div>
 </div>
 
-</html>
