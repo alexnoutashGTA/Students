@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import { LazyMessagesRoutingModule } from './lazy-messages-routing-module';
 import {Messages} from '../../messages/messages';
@@ -13,9 +13,9 @@ import {LazyFooter} from '../../lazy-footer/lazy-footer';
     Messages, LazyFooter
 
   ],
-  imports: [
-    CommonModule,
-    LazyMessagesRoutingModule,FormsModule,ReactiveFormsModule,
-  ]
+    imports: [
+        CommonModule,
+        LazyMessagesRoutingModule, FormsModule, ReactiveFormsModule, NgOptimizedImage,
+    ]
 })
 export class LazyMessagesModule { }

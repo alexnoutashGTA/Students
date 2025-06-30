@@ -32,7 +32,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/app/images"
             ],
             "styles": [
               "src/styles.css"
