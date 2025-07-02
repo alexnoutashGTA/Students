@@ -2,18 +2,31 @@
   <header class="chat-header">
     <h2>ChatterBox</h2>
   </header>
+
+  <!-- 💬 Message Input Form -->
+  <form (ngSubmit)="onSubmit()" #messageForm="ngForm" class="chat-form">
+    <input
+      type="text"
+      name="user"
+      [(ngModel)]="message.user"
+      placeholder="Your name"
+      required
+    />
+    <input
+      type="text"
+      name="content"
+      [(ngModel)]="message.content"
+      placeholder="Type a message..."
+      required
+    />
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- 📬 Display Chat Messages Dynamically -->
   <main class="chat-body">
-    <div class="chat-message">
-      <span class="user-name">Max:</span>
-      <span class="message-content">Hey there! Is the project done?</span>
-    </div>
-    <div class="chat-message">
-      <span class="user-name">Lily:</span>
-      <span class="message-content">Almost! Just finishing touches left.</span>
-    </div>
-    <div class="chat-message">
-      <span class="user-name">Max:</span>
-      <span class="message-content">Awesome! Keep me posted.</span>
+    <div class="chat-message" *ngFor="let msg of allMessages">
+      <span class="user-name">{{ msg.user }}:</span>
+      <span class="message-content">{{ msg.content }}</span>
     </div>
   </main>
 </div>
