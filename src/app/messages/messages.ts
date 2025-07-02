@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MainService} from "../services/main-service";
-
+import(image1.png) from"../assets/imagedata.js"
 @Component({
   selector: 'app-messages',
   standalone: false,
