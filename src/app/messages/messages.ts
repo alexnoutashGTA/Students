@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MainService} from "../services/main-service";
-import (base64image1) from '../assets/imagedata.js'
-let base64image1;
+
 
 @Component({
   selector: 'app-messages',
@@ -13,7 +12,6 @@ let base64image1;
 })
 export class Messages {
 
-  image1= base64image1;
     constructor(protected service:MainService) {
     }
 
