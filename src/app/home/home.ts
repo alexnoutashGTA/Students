@@ -36,16 +36,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
     console.log("selectedHomeProfile " + this.selectedHomeProfile);
 
   }
-  ngDoCheck(){
-    this.nextButtonStyle = {
-      'opacity': this.isFirstPage() ? '0.6' : '1.0',
-      'cursor': this.isFirstPage() ? 'not-allowed' : 'allowed',
-    }
-      this.previousButtonStyle = {
-        'opacity': this.isLastPage()? '0.6' : '1.0',
-        'cursor': this.isLastPage() ? 'not-allowed' : 'allowed',
-    };
-  }
+
 
   ngDoCheck() {
     this.nextButtonStyle = {
