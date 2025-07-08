@@ -7,6 +7,8 @@ import { Home } from './home/home';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 import { Profile } from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { Footer } from './footer/footer';
+import { LazyFooter } from './lazy-footer/lazy-footer';
 
 @NgModule({
   declarations: [
@@ -14,16 +16,21 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     App,
     SideMenu,
     Home,
-    Profile
+    Profile,
+    Footer,
+
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule, ReactiveFormsModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule, ReactiveFormsModule,
+  ],
   providers: [
     provideBrowserGlobalErrorListeners()
+  ],
+  exports: [
+    Footer
   ],
   bootstrap: [App]
 })

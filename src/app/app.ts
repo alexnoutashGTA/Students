@@ -8,8 +8,8 @@ import {Component, Input} from '@angular/core';
 })
 export class App {
   protected title = 'MyBook';
-  breadCrumbTitle: string = 'Welcome to MyBook!';
-  sideMenuTitle: string = 'Welcome to MyBook!';
+  breadCrumbTitle: string = 'Our Community App!';
+  sideMenuTitle: string = 'Our Community App!';
 
   menuItemClicked($event: any) {
     console.log($event)

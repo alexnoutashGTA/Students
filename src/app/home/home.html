@@ -10,11 +10,8 @@
     <button [ngStyle]="previousButtonStyle" (click)="rightButtonClicked()">Next</button>
     </div>
   </section>
-  <section>
-    <div class="mainSection">
-      <input type="text" [(ngModel)]="selectedHomeProfile">
-      <input type="text" [(ngModel)]="message">
-      <app-profile [profile]="selectedHomeProfile" [message]="message"></app-profile>
-    </div>
-  </section>
+
 </article>
+<app-footer>
+
+</app-footer>

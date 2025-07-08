@@ -1,4 +1,14 @@
-<h2>Messages</h2>
+<header class="header">
+  <title>Our Community App</title>
+
+</header>
+<body class="body">
+
+<h1>Start Messaging Here</h1>
+
+
+
+
 
 <form (ngSubmit)="onUserSave()" [formGroup]="submitForm" class="message-form">
   <div class="form-group">
@@ -19,8 +29,9 @@
   <button type="submit" class="submit-btn">Send Message</button>
 </form>
 
+
 <div class="message-list">
-  <h3>Previous Messages</h3>
+  <h2>Previous Messages</h2>
   <div class="avatar" *ngFor="let item of service.messagesList; index as i">
     <div class="header-line">
       <strong>{{ item.userName }}</strong>
@@ -29,3 +40,7 @@
     <p>{{ item.message }}</p>
   </div>
 </div>
+<app-lazy-footer>
+
+</app-lazy-footer>
+</body>

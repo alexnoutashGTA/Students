@@ -50,3 +50,9 @@ input {
   height: 100%;
   padding: 10px;
 }
+h1 {
+  background-color: lightblue;
+}
+footer {
+  background-color: blue;
+}
