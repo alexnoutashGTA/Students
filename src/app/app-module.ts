@@ -9,6 +9,7 @@ import { Profile } from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { Footer } from './footer/footer';
 import { LazyFooter } from './lazy-footer/lazy-footer';
+import {AdsenseModule} from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,10 @@ import { LazyFooter } from './lazy-footer/lazy-footer';
     BrowserModule,
     AppRoutingModule,
     FormsModule, ReactiveFormsModule,
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-7871702403906324',
+      adSlot: 7259870550,
+    })
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
