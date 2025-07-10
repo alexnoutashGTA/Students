@@ -2,7 +2,7 @@
   <section id="avatarSection">
     <div class="avatar-container">
       <div class="avatar" *ngFor="let item of imagesLinks; index as i; ">
-        <img [src]="item" alt="Avatar ">
+        <img [src]="item.url" [alt]="item.desc">
       </div>
 
     </div>
