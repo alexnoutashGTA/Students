@@ -9,7 +9,7 @@ import {MainService} from '../services/main-service';
 })
 export class Home implements OnInit, OnChanges, DoCheck {
 
-  imagesLinks: string[] = []
+  imagesLinks: { url: string; desc: string }[] = []
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
   message: string = '';
