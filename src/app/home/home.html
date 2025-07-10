@@ -6,12 +6,8 @@
       </div>
     </div>
     <div class="buttons">
-      <label for="nextButton" class="visuallyhidden">NextButton: </label>
-      <input type="text">
-      <button type="submit" [ngStyle]="previousButtonStyle" (click)="rightButtonClicked()">Next</button>
-      <label for="previousButton" class="visuallyhidden">PreviousButton: </label>
-      <input type="text">
-    <button type="submit" [ngStyle]="nextButtonStyle" (click)="leftButtonClicked()">Previous</button>
+      <button [ngStyle]="previousButtonStyle" (click)="rightButtonClicked()">Next</button>
+      <button [ngStyle]="nextButtonStyle" (click)="leftButtonClicked()">Previous</button>
 
     </div>
   </section>
