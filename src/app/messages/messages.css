@@ -1,18 +1,21 @@
-.message-list {
+message-list {
   max-width: 500px;
   margin: 2rem auto;
-  padding: 1rem;
-  background-color: #f0f4f8; /* Light blue-gray background */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  border: 1px solid #d1dce5;
+  padding: 1.2rem; /* Slightly more padding */
+  background-color: #f8fbfe; /* Softer background tone */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Deeper soft shadow */
+  border: 1px solid #cdd6e2; /* Lighter border */
 }
 
 .message-list h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem; /* Better spacing */
   text-align: center;
-  color: #333;
+  color: #2c2c2c; /* Slightly deeper text color */
+  font-size: 1.3rem; /* Slight size boost */
+  font-weight: 600; /* Stronger heading */
 }
+
 
 .avatar {
   background-color: #ffffff; /* White message box inside */

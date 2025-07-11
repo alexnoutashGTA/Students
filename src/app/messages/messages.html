@@ -1,20 +1,20 @@
 <header class="header">
   <title>Our Community App</title>
-
 </header>
+
 <body class="body">
 
 <h1>Start Messaging Here for Saiful</h1>
 
 <form (ngSubmit)="onUserSave()" [formGroup]="submitForm" class="message-form">
   <div class="form-group">
-    <label aria-label="username label"  for="username">Username</label>
+    <label aria-label="username label" for="username">Username</label>
     <input aria-label="username input" id="username" name="username" type="text" formControlName="userName" />
   </div>
 
   <div class="form-group">
     <label aria-label="message label" for="message">Message</label>
-    <input aria-label="message input" id="message" name="message" type="text" formControlName="message"  />
+    <input aria-label="message input" id="message" name="message" type="text" formControlName="message" />
   </div>
 
   <div class="form-group">
@@ -22,9 +22,14 @@
     <input aria-label="date input" id="date" name="date" type="date" formControlName="date" />
   </div>
 
+  <!-- ✅ New User Location Field -->
+  <div class="form-group">
+    <label aria-label="user location label" for="location">User Location</label>
+    <input aria-label="user location input" id="location" name="location" type="text" formControlName="location" />
+  </div>
+
   <button aria-label="submit button" id="submit" name="submit" type="submit" class="submit-btn">Send Message</button>
 </form>
-
 
 <div class="message-list">
   <h2>Previous Messages</h2>
@@ -36,7 +41,6 @@
     <p>{{ item.message }}</p>
   </div>
 </div>
-<app-lazy-footer>
 
-</app-lazy-footer>
+<app-lazy-footer></app-lazy-footer>
 </body>
