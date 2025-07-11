@@ -18,12 +18,13 @@ export class Messages {
    userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
     date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
-    })
+    location: new FormControl('', Validators.required,),
+  })
 
   onUserSave() {
     const formValue  = this.submitForm.value;
     // @ts-ignore
-      let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date)
+      let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date, formValue.location)
       this.service.SaveAMessage(newMessage);
   }
 }
