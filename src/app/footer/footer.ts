@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.css'
 })
 export class Footer {
-
+  mapCenter = { lat: 43.7310, lng: -79.2240 };
+  mapZoom = 10;
 }

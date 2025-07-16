@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { Footer } from './footer/footer';
 import { LazyFooter } from './lazy-footer/lazy-footer';
 import {AdsenseModule} from 'ng2-adsense';
+import {GoogleMapsModule} from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {AdsenseModule} from 'ng2-adsense';
 
   ],
   imports: [
+    GoogleMapsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule, ReactiveFormsModule,
