@@ -7,6 +7,7 @@ import { Home } from './home/home';
 import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 import { Profile } from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { Messages } from './messages/messages';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     App,
     SideMenu,
     Home,
-    Profile
+    Profile,
+    Messages
 
   ],
     imports: [
