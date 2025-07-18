@@ -1,0 +1,20 @@
+<h1>FAQ</h1>
+
+<section id="FAQ Section">
+  <article id="FAQ Article">
+    <p>
+      MyBook FAQ: Friends List & Chat History
+      Welcome to the MyBook FAQ section—your go-to resource for everything related to viewing and managing your friends list and chat history on MyBook. These questions and answers are optimized for both users and search engines, helping you find the information you need quickly.
+    </p>
+    <div>
+    <ul>
+      <li  [id]="i" *ngFor="let question of faqList; index as i; " >
+        <i class="fa fa-home"></i><span>{{ question }}</span><br></li>
+    </ul>
+    </div>
+      Report abuse: In any chat, click More Options (⋯) and choose Report. Our moderation team will review and take action within 24 hours.
+
+      Still have questions? Visit Settings > Help & Support or email us at support&#64;mybook.com.
+      Enjoy connecting and chatting safely on MyBook!
+  </article>
+</section>

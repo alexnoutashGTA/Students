@@ -8,7 +8,6 @@ import {BreadCrumbMenu} from './bread-crumb-menu/bread-crumb-menu';
 import { Profile } from './profile/profile';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { Footer } from './footer/footer';
-import { LazyFooter } from './lazy-footer/lazy-footer';
 import {AdsenseModule} from 'ng2-adsense';
 import {GoogleMapsModule} from '@angular/google-maps';
 
@@ -19,9 +18,7 @@ import {GoogleMapsModule} from '@angular/google-maps';
     SideMenu,
     Home,
     Profile,
-    Footer,
-
-
+    Footer
   ],
   imports: [
     GoogleMapsModule,
