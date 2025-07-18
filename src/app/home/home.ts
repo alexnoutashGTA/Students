@@ -10,6 +10,7 @@ import {MainService} from '../services/main-service';
 export class Home implements OnInit, OnChanges, DoCheck {
 
   imagesLinks: { url: string; desc: string }[] = []
+  llmTopic = '';
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
   message: string = '';
@@ -24,6 +25,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
     console.log('home Page Constructor is called');
     this.imagesLinks = service.ImagesLinks.slice(0, 5);
     console.log("Test number: " +this.testNumber);
+    this.llmTopic = this.service.llmIntroduction;
 
   }
 
