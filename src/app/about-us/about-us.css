@@ -6,6 +6,7 @@ learning-list {
   list-style: none;
 }
 
+/* small devices such as cell phones  */
 @media only screen and (max-width: 640px) {
 
 }
@@ -14,11 +15,11 @@ learning-list {
 
 
 }
-
+/* medium devices such as laptops  */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 
 }
-
+/* large devices such as big screens  */
 @media only screen and (min-width: 1281px) {
 
 }
