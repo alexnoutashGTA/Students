@@ -1,0 +1,28 @@
+.faq-container {
+  background-color: #f6f3f3;
+}
+
+/* small devices such as cell phones  */
+@media only screen and (max-width: 640px) {
+  .faq-container {
+    font-size: 20px;
+  }
+}
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .faq-container  {
+    font-size: 18px;
+  }
+}
+/* medium devices such as laptops  */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .faq-container {
+    font-size: 16px;
+  }
+}
+/* large devices such as big screens  */
+@media only screen and (min-width: 1281px) {
+  .faq-container {
+    font-size: 14px;
+  }
+}

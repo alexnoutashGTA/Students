@@ -1,25 +1,31 @@
-about-container {
-  background-color: lightgray ;
+.about-container {
+  background-color: #f6f3f3;
 }
-learning-list {
-  background-color: lightgray ;
+.learning-list {
   list-style: none;
 }
 
 /* small devices such as cell phones  */
 @media only screen and (max-width: 640px) {
-
+  .about-container {
+    font-size: 20px;
+  }
 }
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-
-
+  .about-container  {
+    font-size: 18px;
+  }
 }
 /* medium devices such as laptops  */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-
+  .about-container {
+    font-size: 16px;
+  }
 }
 /* large devices such as big screens  */
 @media only screen and (min-width: 1281px) {
-
+  .about-container {
+    font-size: 14px;
+  }
 }

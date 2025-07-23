@@ -1,6 +1,6 @@
 <h1>FAQ</h1>
 
-<section id="FAQ Section">
+<section class="faq-container" id="FAQ Section">
   <article id="FAQ Article">
     <p>
       MyBook FAQ: Friends List & Chat History
@@ -8,8 +8,8 @@
     </p>
     <div>
     <ul>
-      <li  [id]="i" *ngFor="let question of faqList; index as i; " >
-        <i class="fa fa-home"></i><span>{{ question }}</span><br></li>
+      <div  [id]="i" *ngFor="let question of faqList; index as i; " >
+        <span>{{ question }}</span><br></div>
     </ul>
     </div>
       Report abuse: In any chat, click More Options (⋯) and choose Report. Our moderation team will review and take action within 24 hours.
