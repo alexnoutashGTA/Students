@@ -69,8 +69,14 @@ export class ContentService {
   }
   // Dependency Injection
   constructor(private http: HttpClient) {
-    this.getFaqData().subscribe( x=>{
-      console.log(x);})
+    this.getFaqData().subscribe( asyncCallResponse=> {
+        asyncCallResponse.forEach((response:any) => {
+console.log(response);
+          this.faqContent.push(response.title);
+          this.faqContent.push(response.body);
+        })
+    }
+    )
   }
 
   getFaqData() {
