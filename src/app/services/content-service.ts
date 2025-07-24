@@ -70,7 +70,7 @@ export class ContentService {
   }
   // Dependency Injection
   constructor(private http: HttpClient ) {
-    this.getFaqData().subscribe(asyncCallResponse => {
+    this.getLocalFaqData().subscribe(asyncCallResponse => {
         asyncCallResponse.forEach((response: any) => {
           this.remoteContent.push(response)
         })
@@ -78,6 +78,10 @@ export class ContentService {
     )
   }
 
+  getLocalFaqData() {
+    const url = 'http://localhost:3000/faqs'; // Example URL
+    return this.http.get<any[]>(url);
+  }
   getFaqData() {
     const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL
     return this.http.get<any[]>(url);
