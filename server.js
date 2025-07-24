@@ -1,6 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
+app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200'
+}));
 
 // Sample data: a FAQ list in JSON format
 const faqs = [
@@ -20,7 +25,9 @@ const faqs = [
 
 // GET endpoint to fetch FAQs
 app.get('/faqs', (req, res) => {
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.json(faqs);
+
 });
 
 // Start the server
