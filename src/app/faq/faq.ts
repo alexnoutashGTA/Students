@@ -9,8 +9,10 @@ import {ContentService} from '../services/content-service';
 })
 export class Faq {
   faqList: string[];
+  remoteFaqList: any;
   /*Inject the service and get the content*/
   constructor(private contentService: ContentService) {
-    this.faqList = contentService.getFaqContent()
+    this.faqList = contentService.getFaqContent();
+    this.remoteFaqList = contentService.getRemoteContent();
   }
 }

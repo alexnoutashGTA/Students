@@ -8,8 +8,11 @@
     </p>
     <div>
     <ul>
-      <div  [id]="i" *ngFor="let question of faqList; index as i; " >
-        <span>{{ question }}</span><br></div>
+      <div  [id]="i" *ngFor="let faqObject of remoteFaqList; index as i; " >
+        <h3>{{faqObject.title}}</h3>
+        <p>{{faqObject.body}}</p>
+        <br>
+      </div>
     </ul>
     </div>
       Report abuse: In any chat, click More Options (⋯) and choose Report. Our moderation team will review and take action within 24 hours.

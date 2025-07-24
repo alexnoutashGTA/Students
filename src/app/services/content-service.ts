@@ -4,8 +4,9 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class ContentService {
 
+  private remoteContent: object[] = [];
   /* Only ContentService class has access to this private array*/
-  private faqContent = [
+  private faqContent: string[] = [
     ` How do I view my Friends List on MyBook?
     To see all your connections, click the Friends icon in the top navigation bar. Your Friends List displays each friend’s profile photo, name, and online status. You can use the search box to quickly find a specific friend by name`,
 
@@ -68,19 +69,22 @@ export class ContentService {
     return this.faqContent;
   }
   // Dependency Injection
-  constructor(private http: HttpClient) {
-    this.getFaqData().subscribe( asyncCallResponse=> {
-        asyncCallResponse.forEach((response:any) => {
-console.log(response);
-          this.faqContent.push(response.title);
-          this.faqContent.push(response.body);
+  constructor(private http: HttpClient ) {
+    this.getFaqData().subscribe(asyncCallResponse => {
+        asyncCallResponse.forEach((response: any) => {
+          this.remoteContent.push(response)
         })
-    }
+      }
     )
   }
 
   getFaqData() {
     const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL
     return this.http.get<any[]>(url);
+  }
+
+  // Encapsulation :)
+  getRemoteContent() {
+    return this.remoteContent;
   }
 }
