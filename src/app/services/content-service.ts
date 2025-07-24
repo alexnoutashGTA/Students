@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class ContentService {
@@ -66,5 +67,14 @@ export class ContentService {
   getFaqContent(){
     return this.faqContent;
   }
-  constructor() { }
+  // Dependency Injection
+  constructor(private http: HttpClient) {
+    this.getFaqData().subscribe( x=>{
+      console.log(x);})
+  }
+
+  getFaqData() {
+    const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL
+    return this.http.get<any[]>(url);
+  }
 }

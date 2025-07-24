@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LazyFaqRoutingModule } from './lazy-faq-routing-module';
 import {Faq} from '../../faq/faq';
 import {ContentService} from '../../services/content-service';
+import {provideHttpClient} from '@angular/common/http';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {ContentService} from '../../services/content-service';
     LazyFaqRoutingModule
   ],
   providers: [
-    ContentService
+    ContentService,
+    provideHttpClient(),
   ]
 })
 export class LazyFaqModule { }
