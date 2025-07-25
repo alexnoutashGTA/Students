@@ -4,6 +4,14 @@ const app = express();
 const port = 3000;
 app.use(cors());
 
+const contentful = require('contentful')
+
+const client = contentful.createClient({
+    space: 'nhlpl73kcz1y',
+    environment: 'master', // defaults to 'master' if not set
+    accessToken: 'qBuwY0ofQyQouiBag1pKlfAAv0FsEK4TWrjTI8v1qcY'
+})
+
 
 // Sample data: a FAQ list in JSON format
 const faqs = [
@@ -23,7 +31,12 @@ const faqs = [
 
 // GET endpoint to fetch FAQs
 app.get('/faqs', (req, res) => {
-    res.json(faqs);
+    client.getEntry('5G9pM7jHO9NkzoWfoNyOft')
+        .then((entry) => {
+            console.log(entry.fields.faqText);
+            return res.send(entry.fields.faqText);
+        } )
+        .catch(console.error)
 });
 app.post('/message', (req, res) => {});
 
