@@ -33,7 +33,6 @@ const faqs = [
 app.get('/faqs', (req, res) => {
     client.getEntry('5G9pM7jHO9NkzoWfoNyOft')
         .then((entry) => {
-            console.log(entry.fields.faqText);
             return res.send(entry.fields.faqText);
         } )
         .catch(console.error)
