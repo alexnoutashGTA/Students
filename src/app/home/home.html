@@ -14,8 +14,11 @@
     <div class="buttons">
       <button [ngStyle]="previousButtonStyle" (click)="rightButtonClicked()">Next</button>
       <button [ngStyle]="nextButtonStyle" (click)="leftButtonClicked()">Previous</button>
-
     </div>
+  </section>
+  <section>
+    <input type="text" height="50px" width="200px"  [(ngModel)]="userName">
+    <button (click)="saveName()">Save</button>
   </section>
 
 </article>

@@ -19,13 +19,16 @@ export class Home implements OnInit, OnChanges, DoCheck {
   previousButtonStyle: object = {};
   isFirstPage = signal(true);
   isLastPage = signal(false);
+  private Window: any;
+  userName: string = '';
 
 
-  constructor(private service: MainService) {
+  constructor(private service: MainService, private windowRef: Window) {
     console.log('home Page Constructor is called');
     this.imagesLinks = service.ImagesLinks.slice(0, 5);
     console.log("Test number: " +this.testNumber);
     this.llmTopic = this.service.llmIntroduction;
+    this.Window=windowRef;
 
   }
 
@@ -61,6 +64,12 @@ export class Home implements OnInit, OnChanges, DoCheck {
     }
       this.isLastPage.set(false)
 
+
+      this.Window.dataLayer.push({event: 'homepagenextbutton'});
+      this.Window.dataLayer.push({
+        'userName': this.service.usrName
+      });
+
   }
 
   rightButtonClicked() {
@@ -73,5 +82,9 @@ export class Home implements OnInit, OnChanges, DoCheck {
     }
     this.isFirstPage.set(false);
 
+  }
+
+  saveName() {
+    this.service.saveName(this.userName);
   }
 }

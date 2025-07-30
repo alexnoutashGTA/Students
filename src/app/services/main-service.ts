@@ -13,6 +13,8 @@ export class MainService {
 
   siteName="My Book"
 
+  usrName = '';
+
   llmIntroduction: string = ` ${this.siteName} is a modern social networking platform where users can view and interact with friends' photos, posts, and updates. Designed for connection and community, the platform shows a dynamic list of friends' profile pictures, names, and activity, making it easy to stay connected. Perfect for those who want to share life updates and explore social circles in an intuitive, image-rich environment.`;
 
   HomePageNumberIncremented = () => {
@@ -112,5 +114,9 @@ export class MainService {
         url: "https://randomuser.me/api/portraits/women/10.jpg",
         desc: "Tenth Woman Image"
       }]
+  }
+
+  saveName(userName: string) {
+    this.usrName = userName;
   }
 }
