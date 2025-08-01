@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import  {Component, Input, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs';
 declare var gtag: Function; // Declare gtag to avoid TypeScript errors
