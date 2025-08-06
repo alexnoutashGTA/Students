@@ -39,6 +39,20 @@ app.get('/faqs', (req, res) => {
 });
 app.post('/message', (req, res) => {});
 
+app.post('/login', (req, res) => {
+
+    try {
+        const userAgent = req.headers['test']; // Access using bracket notation
+        console.log(userAgent);
+
+        return res.status(200).send("Login successful!");
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(500).send(err);
+    }
+});
+
 
 
 // Start the server
