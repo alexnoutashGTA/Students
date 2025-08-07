@@ -3,15 +3,17 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 app.use(cors());
+const bodyParser = require('body-parser');
 
-const contentful = require('contentful')
+const contentful = require('contentful');
 
 const client = contentful.createClient({
     space: 'nhlpl73kcz1y',
     environment: 'master', // defaults to 'master' if not set
     accessToken: 'qBuwY0ofQyQouiBag1pKlfAAv0FsEK4TWrjTI8v1qcY'
 })
-
+// create application/json parser
+var jsonParser = bodyParser.json()
 
 // Sample data: a FAQ list in JSON format
 const faqs = [
@@ -39,13 +41,12 @@ app.get('/faqs', (req, res) => {
 });
 app.post('/message', (req, res) => {});
 
-app.post('/login', (req, res) => {
+app.post('/login',jsonParser, (req, res) => {
 
     try {
-        const userAgent = req.headers['test']; // Access using bracket notation
-        console.log(userAgent);
+        console.log(req.body);
 
-        return res.status(200).send("Login successful!");
+        return res.status(200).send({result:"Login successful!"});
     }
     catch (err) {
         console.log(err);
