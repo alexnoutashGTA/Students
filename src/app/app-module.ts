@@ -10,6 +10,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { Footer } from './footer/footer';
 import {AdsenseModule} from 'ng2-adsense';
 import {GoogleMapsModule} from '@angular/google-maps';
+import { Login } from './login/login';
+import {ContentService} from './services/content-service';
+import {HttpClient, provideHttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import {GoogleMapsModule} from '@angular/google-maps';
     SideMenu,
     Home,
     Profile,
-    Footer
+    Footer,
+    Login
   ],
   imports: [
     GoogleMapsModule,
@@ -32,6 +36,7 @@ import {GoogleMapsModule} from '@angular/google-maps';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    ContentService,    provideHttpClient(),
     { provide: Window, useValue: window }
   ],
   exports: [

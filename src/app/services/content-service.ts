@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
+type PostLoginParams = {
+  loginBody: { userName: string; password: string };
+}
+
 @Injectable()
 export class ContentService {
 
@@ -82,6 +86,13 @@ export class ContentService {
     const url = 'http://localhost:3000/faqs'; // Example URL
     return this.http.get<any[]>(url);
   }
+
+  postLogin({loginBody}: PostLoginParams){
+    const url = 'http://localhost:3000/login'; // Example URL
+    return this.http.post(url, loginBody);
+  }
+
+
   getFaqData() {
     const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL
     return this.http.get<any[]>(url);
