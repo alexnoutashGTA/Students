@@ -4,8 +4,9 @@ const app = express();
 const port = 3000;
 app.use(cors());
 const bodyParser = require('body-parser');
-
 const contentful = require('contentful');
+const sql = require("mssql");
+
 
 const client = contentful.createClient({
     space: 'nhlpl73kcz1y',
@@ -31,6 +32,22 @@ const faqs = [
     }
 ];
 
+var config = {
+    "user": "alexnoutash", // Database username
+    "password": "MyClass2025!", // Database password
+    "server": "citicollege.database.windows.net", // Server IP address
+    "database": "MyBook", // Database name
+    "options": {
+        "encrypt": true // Disable encryption
+    }
+}
+sql.connect(config, err => {
+    if (err) {
+        throw err;
+    }
+    console.log("Connection Successful!");
+});
+
 // GET endpoint to fetch FAQs
 app.get('/faqs', (req, res) => {
     client.getEntry('5G9pM7jHO9NkzoWfoNyOft')
@@ -39,6 +56,16 @@ app.get('/faqs', (req, res) => {
         } )
         .catch(console.error)
 });
+app.get('/messages', (req, res) => {
+    new sql.Request().query("SELECT * FROM chathistory", (err, result) => {
+        if (err) {
+            console.error("Error executing query:", err);
+        } else {
+            res.send(result.recordset); // Send query result as response
+            console.dir(result.recordset);
+        }
+    });
+})
 app.post('/message', (req, res) => {});
 
 app.post('/login',jsonParser, (req, res) => {

@@ -15,6 +15,7 @@
     "body-parser": "^2.2.0",
     "contentful": "^11.7.12",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mssql": "^11.0.1"
   }
 }
