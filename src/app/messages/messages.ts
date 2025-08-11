@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {messageObject} from './messageObject';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MainService} from "../services/main-service";
+import {ContentService} from '../services/content-service';
 
 @Component({
   selector: 'app-messages',
@@ -11,7 +12,7 @@ import {MainService} from "../services/main-service";
 })
 export class Messages {
 
-    constructor(protected service:MainService) {
+    constructor(protected service:MainService, protected contentService:ContentService) {
     }
 
   submitForm = new FormGroup({
@@ -20,10 +21,13 @@ export class Messages {
     date: new FormControl('', [Validators.required, Validators.pattern(/^\d{4}-\d{2}-\d{2}$/)]),
     })
 
-  onUserSave() {
+  onMessageSave() {
     const formValue  = this.submitForm.value;
     // @ts-ignore
       let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date)
       this.service.SaveAMessage(newMessage);
-  }
-}
+      this.contentService.postNessage({
+        messageBody: {message: formValue.message, receiverID: formValue.userName, senderID: 'Alex'}})
+        .subscribe(x=>console.log(x));
+  }}
+

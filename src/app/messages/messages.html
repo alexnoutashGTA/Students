@@ -6,7 +6,7 @@
 
 <h1>Start Messaging Here</h1>
 
-<form (ngSubmit)="onUserSave()" [formGroup]="submitForm" class="message-form">
+<form (ngSubmit)="onMessageSave()" [formGroup]="submitForm" class="message-form">
   <div class="form-group">
     <label aria-label="username label"  for="username">Username</label>
     <input aria-label="username input" id="username" name="username" type="text" formControlName="userName" />

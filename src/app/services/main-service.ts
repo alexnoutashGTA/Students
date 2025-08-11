@@ -30,6 +30,7 @@ export class MainService {
 
   SaveAMessage(newMessage: messageObject) {
     this.messagesList.push(newMessage);
+
   }
 
   constructor() {

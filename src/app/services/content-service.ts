@@ -4,6 +4,9 @@ import {HttpClient} from '@angular/common/http';
 type PostLoginParams = {
   loginBody: { userName: string; password: string };
 }
+type PostMessageParams = {
+  messageBody: { senderID: string | null | undefined; receiverID: string |null|undefined, message: string|null|undefined };
+}
 
 @Injectable()
 export class ContentService {
@@ -90,6 +93,11 @@ export class ContentService {
   postLogin({loginBody}: PostLoginParams){
     const url = 'http://localhost:3000/login'; // Example URL
     return this.http.post(url, loginBody);
+  }
+
+  postNessage({messageBody}: PostMessageParams){
+    const url = 'http://localhost:3000/message'; // Example URL
+    return this.http.post(url, messageBody);
   }
 
 
