@@ -66,7 +66,45 @@ app.get('/messages', (req, res) => {
         }
     });
 })
-app.post('/message', (req, res) => {});
+app.post('/message',jsonParser, (req, res) => {
+    const data = req.body;
+    const table = 'chathistory';
+    console.log(data);
+
+    if (!table || !data || typeof data !== 'object') {
+        return res.status(400).json({error: 'Missing or invalid table or data'});
+    }
+
+    const columns = Object.keys(data).join(', ');
+    const values = Object.values(data);
+    const placeholders = values.map((x) => "?").join(', ');
+    console.log(columns);
+    console.log(values);
+    console.log(placeholders);
+
+    const sqlStatement = `INSERT INTO ${table} (${columns})
+                 VALUES ('a','b','c')`;
+
+    console.log('Generated SQL:', sqlStatement);
+
+    new sql.Request().query(sqlStatement, values, (err, result) => {
+        if (err) {
+            console.error('Insert error:', err);
+            return res.status(500).json({error: 'Insert failed'});
+        }
+
+        res.status(201).json({
+            message: 'Insert successful',
+            insertId: result.insertId,
+            sql: sql
+        });
+    });
+});
+
+
+
+
+
 
 app.post('/login',jsonParser, (req, res) => {
 
