@@ -70,6 +70,12 @@ app.post('/message',jsonParser, (req, res) => {
     const data = req.body;
     const table = 'chathistory';
     console.log(data);
+    sql.connect(config, err => {
+        if (err) {
+            throw err;
+        }
+        console.log("Connection Successful!");
+    });
 
     if (!table || !data || typeof data !== 'object') {
         return res.status(400).json({error: 'Missing or invalid table or data'});
@@ -77,13 +83,13 @@ app.post('/message',jsonParser, (req, res) => {
 
     const columns = Object.keys(data).join(', ');
     const values = Object.values(data);
-    const placeholders = values.map((x) => "?").join(', ');
+    const placeholders = values.map((x) => `'${x}'`).join(', ');
     console.log(columns);
     console.log(values);
     console.log(placeholders);
 
     const sqlStatement = `INSERT INTO ${table} (${columns})
-                 VALUES ('a','b','c')`;
+                 VALUES (${placeholders})`;
 
     console.log('Generated SQL:', sqlStatement);
 
