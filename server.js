@@ -84,8 +84,8 @@ app.post('/message',jsonParser, (req, res) => {
     const columns = Object.keys(data).join(', ');
     const values = Object.values(data);
     const placeholders = values.map((x) => `'${x}'`).join(', ');
-    console.log(columns);
-    console.log(values);
+    console.log('column names',columns);
+    console.log('values for columns', values);
     console.log(placeholders);
 
     const sqlStatement = `INSERT INTO ${table} (${columns})
@@ -102,7 +102,6 @@ app.post('/message',jsonParser, (req, res) => {
         res.status(201).json({
             message: 'Insert successful',
             insertId: result.insertId,
-            sql: sql
         });
     });
 });
