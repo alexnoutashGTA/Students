@@ -4,7 +4,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const contentful = require('contentful');
 const sql = require("mssql");
-
+const cors = require("cors");
+app.use(cors())
 
 const client = contentful.createClient({
     space: 'nhlpl73kcz1y',
