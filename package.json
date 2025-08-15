@@ -17,5 +17,14 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mssql": "^11.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexnoutashGTA/Students.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexnoutashGTA/Students/issues"
+  },
+  "homepage": "https://github.com/alexnoutashGTA/Students#readme"
 }
