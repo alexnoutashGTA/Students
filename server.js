@@ -47,7 +47,9 @@ sql.connect(config, err => {
     }
     console.log("Connection Successful!");
 });
-
+app.get('', (req, res) => {
+    return res.send('Hello World!');
+});
 // GET endpoint to fetch FAQs
 app.get('/faqs', (req, res) => {
     client.getEntry('5G9pM7jHO9NkzoWfoNyOft')
