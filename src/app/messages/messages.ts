@@ -27,7 +27,7 @@ export class Messages {
       let newMessage: messageObject = new messageObject(formValue.userName, formValue.message,formValue.date)
       this.service.SaveAMessage(newMessage);
       this.contentService.postNessage({
-        messageBody: {message: formValue.message, receiverID: formValue.userName, senderID: 'Alex'}})
+        messageBody: { senderID: 'Alex', receiverID: formValue.userName,message: formValue.message}})
         .subscribe(x=>console.log(x));
   }}
 

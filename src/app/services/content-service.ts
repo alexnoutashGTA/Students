@@ -11,6 +11,7 @@ type PostMessageParams = {
 @Injectable()
 export class ContentService {
 
+  private  serverAddress = 'https://mybookciti.azurewebsites.net';
   private remoteContent: object[] = [];
   /* Only ContentService class has access to this private array*/
   private faqContent: string[] = [
@@ -86,24 +87,18 @@ export class ContentService {
   }
 
   getLocalFaqData() {
-    const url = 'http://localhost:3000/faqs'; // Example URL
+    const url = `${this.serverAddress}/faqs`; // Example URL
     return this.http.get<any[]>(url);
   }
 
   postLogin({loginBody}: PostLoginParams){
-    const url = 'http://localhost:3000/login'; // Example URL
+    const url = `${this.serverAddress}/login`; // Example URL
     return this.http.post(url, loginBody);
   }
 
   postNessage({messageBody}: PostMessageParams){
-    const url = 'http://localhost:3000/message'; // Example URL
+    const url = `${this.serverAddress}/message`; // Example URL
     return this.http.post(url, messageBody);
-  }
-
-
-  getFaqData() {
-    const url = 'https://jsonplaceholder.typicode.com/posts'; // Example URL
-    return this.http.get<any[]>(url);
   }
 
   // Encapsulation :)
