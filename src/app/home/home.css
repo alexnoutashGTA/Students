@@ -216,4 +216,10 @@ article {
   justify-content: space-between;
 }
 
+.secondAssetArea{
+  margin-top: 80px;
+}
+.primeAssetArea{
+  margin-bottom: 40px;
+}
 
