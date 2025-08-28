@@ -90,6 +90,10 @@ export class ContentService {
     const url = `${this.serverAddress}/faqs`; // Example URL
     return this.http.get<any[]>(url);
   }
+  getMessages() {
+    const url = `${this.serverAddress}/messages`; // Example URL
+    return this.http.get<any[]>(url);
+  }
 
   postLogin({loginBody}: PostLoginParams){
     const url = `${this.serverAddress}/login`; // Example URL

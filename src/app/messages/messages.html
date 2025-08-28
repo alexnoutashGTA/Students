@@ -5,8 +5,21 @@
 <body class="body">
 
 <h1>Start Messaging Here</h1>
+<div id="primeArea">
+  <div id="existingmessages" class="message-list">
+    <h2>Previous Messages</h2>
+    <div class="avatar" *ngFor="let item of messages; index as i">
+      <div class="header-line">
+        <strong>{{ item.userName }}</strong>
+        <span class="date">{{ item.dateTime }}</span>
+      </div>
+      <p>{{ item.message }}</p>
+    </div>
+  </div>
 
-<form (ngSubmit)="onMessageSave()" [formGroup]="submitForm" class="message-form">
+  <div id="postnewmessage">
+    <div>
+        <form (ngSubmit)="onMessageSave()" [formGroup]="submitForm" class="message-form">
   <div class="form-group">
     <label aria-label="username label"  for="username">Username</label>
     <input aria-label="username input" id="username" name="username" type="text" formControlName="userName" />
@@ -24,19 +37,10 @@
 
   <button aria-label="submit button" id="submit" name="submit" type="submit" class="submit-btn">Send Message</button>
 </form>
-
-
-<div class="message-list">
-  <h2>Previous Messages</h2>
-  <div class="avatar" *ngFor="let item of service.messagesList; index as i">
-    <div class="header-line">
-      <strong>{{ item.userName }}</strong>
-      <span class="date">{{ item.dateTime }}</span>
     </div>
-    <p>{{ item.message }}</p>
+    <div>
+    <app-lazy-footer></app-lazy-footer>
+  </div>
   </div>
 </div>
-<app-lazy-footer>
-
-</app-lazy-footer>
 </body>

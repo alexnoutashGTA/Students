@@ -223,3 +223,9 @@ article {
   margin-bottom: 40px;
 }
 
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}

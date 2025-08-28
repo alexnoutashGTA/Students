@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {messageObject} from './messageObject';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MainService} from "../services/main-service";
@@ -10,11 +10,19 @@ import {ContentService} from '../services/content-service';
   templateUrl: './messages.html',
   styleUrl: './messages.css'
 })
-export class Messages {
+export class Messages implements OnInit {
+  protected messages :messageObject[] = [];
 
     constructor(protected service:MainService, protected contentService:ContentService) {
     }
-
+  ngOnInit() {
+    this.contentService.getMessages().subscribe(asyncCallResponse => {
+        asyncCallResponse.forEach((response: any) => {
+          this.messages.push(new messageObject(response.senderID,response.message,response.receiverID))
+        })
+      }
+    )
+  }
   submitForm = new FormGroup({
    userName: new FormControl('Alex', [Validators.required, Validators.maxLength(6)]),
     message: new FormControl('', Validators.required,),
