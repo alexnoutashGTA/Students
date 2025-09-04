@@ -8,7 +8,7 @@ import {ContentService} from '../services/content-service';
   selector: 'app-messages',
   standalone: false,
   templateUrl: './messages.html',
-  styleUrl: './messages.css'
+  styleUrls: ['./messages.css', '../assets/theme.css']
 })
 export class Messages implements OnInit {
   protected messages :messageObject[] = [];

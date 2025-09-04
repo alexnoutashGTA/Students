@@ -1,29 +1,29 @@
-.body{
+.main_app_frame{
   display: flex;
 }
 .main-body{
   padding: 50px;
 }
 @media only screen and (max-width: 640px) {
-  .body{
+  .main_app_frame{
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  .body{
+  .main_app_frame{
     flex-direction: column;
   }
 
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  .body{
+  .main_app_frame{
     flex-direction: row;
   }
 }
 
 @media only screen and (min-width: 1281px) {
-  .body{
+  .main_app_frame{
     flex-direction: row;
   }
 }

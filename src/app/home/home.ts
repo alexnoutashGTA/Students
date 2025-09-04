@@ -5,7 +5,7 @@ import {MainService} from '../services/main-service';
   selector: 'app-home',
   standalone: false,
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css','../assets/theme.css']
 })
 export class Home implements OnInit, OnChanges, DoCheck {
 
