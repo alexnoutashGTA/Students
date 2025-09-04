@@ -33,24 +33,9 @@
   display: flex;
   flex-direction: column;
 }
-.mainSection{
-  background-color: #ae9191;
-}
-.circle {
-  border-radius: 50%;
-  position: absolute;
-  height: auto;
-  width: auto;
-  margin: auto;
-}
 
-.smallBox {
-  width: 250px;
-  height: 250px;
-  border: 1px solid #330202;
-  padding: 10px;
-  border-radius: 50%;
-}
+
+
 
 
 html {
@@ -61,13 +46,7 @@ html {
 
 /* Small devices such as cellphones */
 @media only screen and (max-width: 640px) {
-  .smallBox{
-    width: 350px;
-    height: 350px;
-    padding: 50px;
-    margin: 10px;
-    background: #af1010;
-  }
+
 
   header {
     padding-left: 55px;
@@ -101,14 +80,7 @@ html {
 
 /* Medium devices such as tablets (641px and 1281) */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  .smallBox{
-    width: 450px;
-    height: 450px;
-    padding: 50px;
-    margin: 10px;
-    background: #101daf;
 
-  }
 }
 
 /* Large devices such as full screens (1281 and up) */
@@ -116,64 +88,9 @@ html {
 
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  overflow: hidden;
-}
 
-button.toggle {
-  z-index: 10;
-  position: fixed;
-  left: 12px;
-  top: 10px;
-  background-color: #575757;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
 
-nav {
-  width: 250px;
-  height: 100vh;
-  background-color: #333;
-  transition: all 0.3s;
-  padding-top: 60px;
-
-  &.min {
-    width: 60px;
-
-    span {
-      opacity: 0;
-    }
-  }
-
-  ul {
-    color: white;
-
-    a {
-      display: flex;
-      gap: 10px;
-      padding: 10px 20px;
-      color: white;
-      text-decoration: none;
-      &:hover {
-        background-color: gray;
-      }
-
-      span {
-        transition: opacity 0.3s ease-in-out;
-      }
-    }
-  }
-}
 
 main {
   flex-grow: 1;
@@ -194,7 +111,7 @@ article {
   padding: 20px;
 }
 
-.buttons{
+.buttons_row{
   display: flex;
   flex-direction: row;
   justify-items: center;
