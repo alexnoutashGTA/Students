@@ -26,7 +26,7 @@
   transform: scale(1.05);
 }
 
-.content{
+.home_page_main_area{
   width: 100%;
   height: 100%;
   border: #151515 1px solid;
@@ -37,6 +37,18 @@
 
 /* Small devices such as cellphones */
 @media only screen and (max-width: 640px) {
+  .avatar-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
 
 }
 
