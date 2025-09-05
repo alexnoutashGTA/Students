@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LazyDetailRoutingModule } from './lazy-detail-routing-module';
 import {Detail} from '../../detail/detail';
+import {LazyMessagesModule} from "../lazy-messages/lazy-messages-module";
 
 
 
@@ -10,9 +11,10 @@ import {Detail} from '../../detail/detail';
   declarations: [
    Detail
   ],
-  imports: [
-    CommonModule,
-    LazyDetailRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        LazyDetailRoutingModule,
+        LazyMessagesModule
+    ]
 })
 export class LazyDetailModule { }

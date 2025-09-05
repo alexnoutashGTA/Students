@@ -13,9 +13,12 @@ import {LazyFooter} from '../../lazy-footer/lazy-footer';
     Messages, LazyFooter
 
   ],
+  exports: [
+    LazyFooter
+  ],
   imports: [
     CommonModule,
-    LazyMessagesRoutingModule,FormsModule,ReactiveFormsModule,
+    LazyMessagesRoutingModule, FormsModule, ReactiveFormsModule,
   ]
 })
 export class LazyMessagesModule { }
