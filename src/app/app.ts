@@ -7,7 +7,7 @@ declare var gtag: Function; // Declare gtag to avoid TypeScript errors
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: false,
-  styleUrl: './app.css'
+  styleUrls: ['./app.css','./assets/theme-font-chatGPT.css']
 })
 export class App implements OnInit {
   protected title = 'MyBook';

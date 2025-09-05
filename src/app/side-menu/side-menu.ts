@@ -5,7 +5,7 @@ import {MenuService} from '../services/menu-service';
   selector: 'app-side-menu',
   standalone: false,
   templateUrl: './side-menu.html',
-  styleUrl: './side-menu.css'
+  styleUrls: ['./side-menu.css']
 })
 export class SideMenu {
   @Input() title = ''; // decorate the property with @Input()
