@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-lazy-footer',
   standalone: false,
   templateUrl: './lazy-footer.html',
-  styleUrl: './lazy-footer.css'
+  styleUrls: ['./lazy-footer.css', '../assets/theme-anchor-chatGPT.css']
 })
 export class LazyFooter {
 

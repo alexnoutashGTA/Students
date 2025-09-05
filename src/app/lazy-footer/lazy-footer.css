@@ -1,5 +1,7 @@
-.footer h3 {
-   background-color: lightblue;
+
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
-

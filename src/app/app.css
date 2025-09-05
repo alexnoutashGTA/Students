@@ -1,8 +1,10 @@
 .main_app_frame{
   display: flex;
+  width: 100%;
 }
 .main-body{
   padding: 50px;
+  width: inherit;
 }
 @media only screen and (max-width: 640px) {
   .main_app_frame{

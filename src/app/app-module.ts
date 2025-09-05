@@ -12,7 +12,7 @@ import {AdsenseModule} from 'ng2-adsense';
 import {GoogleMapsModule} from '@angular/google-maps';
 import { Login } from './login/login';
 import {ContentService} from './services/content-service';
-import {HttpClient, provideHttpClient} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [

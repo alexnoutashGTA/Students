@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {messageObject} from './messageObject';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {MainService} from "../services/main-service";
 import {ContentService} from '../services/content-service';
 
