@@ -51,9 +51,21 @@ app.get('/messages', (req, res) => {
         }
     });
 })
-app.post('/message',jsonParser, (req, res) => {
-    const data = req.body;
+app.get('/personalinfoes', (req, res) => {
+    new sql.Request().query("SELECT * FROM PersonalInformation_Alex", (err, result) => {
+        if (err) {
+            console.error("Error executing query:", err);
+        } else {
+            res.send(result.recordset); // Send query result as response
+            console.dir(result.recordset);
+        }
+    });
+})
+app.post('/message',jsonParser, (request, response) => {
+    try {
+    const data = request.body;
     const table = 'chathistory';
+    console.log("Sent Data ");
     console.log(data);
     sql.connect(config, err => {
         if (err) {
@@ -78,17 +90,21 @@ app.post('/message',jsonParser, (req, res) => {
 
     console.log('Generated SQL:', sqlStatement);
 
-    new sql.Request().query(sqlStatement, values, (err, result) => {
-        if (err) {
-            console.error('Insert error:', err);
-            return res.status(500).json({error: 'Insert failed'});
-        }
-
-        res.status(201).json({
-            message: 'Insert successful',
-            insertId: result.insertId,
+        new sql.Request().query(sqlStatement, values, (err, result) => {
+            if (err) {
+                console.error('Insert error:', err);
+                return response.status(500).json({error: 'Insert failed'});
+            }
         });
-    });
+        response.status(204).json({
+            message: 'Insert successful',
+        });
+    }
+    catch(error){
+        console.log("Error", error.message );
+        return response.status(500).json({error: 'Insert failed'});
+    }
+
 });
 
 
