@@ -52,7 +52,7 @@ app.get('/messages', (req, res) => {
     });
 })
 app.get('/personalinfoes', (req, res) => {
-    new sql.Request().query("SELECT * FROM PersonalInformation_Alex", (err, result) => {
+    new sql.Request().query("SELECT * FROM Table_1Rahman", (err, result) => {
         if (err) {
             console.error("Error executing query:", err);
         } else {
@@ -61,6 +61,35 @@ app.get('/personalinfoes', (req, res) => {
         }
     });
 })
+app.post('/personalinfo', jsonParser, async (request, response) => {
+
+    try {
+        const data = request.body;
+        const studentId = data["studentId"];
+        console.log(studentId);
+        await sql.connect(config);
+
+        // Create a new request
+        let sqlrequest = new sql.Request();
+
+        // Define input parameters (if any)
+        // Example: Assuming your stored procedure 'GetAuthorsByBirthDate' takes StartDate and EndDate
+        sqlrequest.input('StudentNumber', sql.TYPES.BigInt, studentId);
+
+        // Execute the stored procedure
+        const result = await sqlrequest.execute('QueryStudentsAddress');
+
+        // Access the results
+        console.log("Recordsets:", result.recordsets); // Array of recordsets
+
+        response.status(200).send(result.recordset); // Send query result as response
+
+    } catch (err) {
+        console.error("Error calling stored procedure:", err);
+    }
+})
+
+
 app.post('/message',jsonParser, (request, response) => {
     try {
     const data = request.body;
