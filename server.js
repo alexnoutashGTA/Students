@@ -4,7 +4,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const contentful = require('contentful');
 const sql = require("mssql");
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://alexnoutash:MyClass2025!@cluster0.fpj2nzm.mongodb.net/?retryWrites=true&w=majority"; // Replace with your connection string
+const mongoClient = new MongoClient(uri);
 const cors = require("cors");
+const {response} = require("express");
 app.use(cors())
 
 const client = contentful.createClient({
@@ -51,6 +55,24 @@ app.get('/messages', (req, res) => {
         }
     });
 })
+app.get('/personalInfo',jsonParser, async (req, res) => {
+    try {
+        const data = req.body;
+        const studentId = data["studentId"];
+        const database = mongoClient.db('MyBook');
+        const collection = database.collection('PersonalInformation');
+        await mongoClient.connect();
+        const user = await collection.findOne({ StudentId: `${studentId}` });
+        res.status(200).send(user);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({"message":error.message});
+    }
+});
+
+
+
 app.get('/personalinfoes', (req, res) => {
     new sql.Request().query("SELECT * FROM Table_1Rahman", (err, result) => {
         if (err) {
