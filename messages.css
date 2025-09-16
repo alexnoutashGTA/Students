@@ -1,0 +1,27 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.message-list {
+  background: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message-input {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+}
