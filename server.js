@@ -60,7 +60,6 @@ app.post('/personalInfo',jsonParser, async (req, res) => {
     try {
         const data = req.body;
         const studentId = data["studentId"];
-        console.log(studentId);
         const database = mongoClient.db('MyBook');
         const collection = database.collection('PersonalInformation');
         await mongoClient.connect();
