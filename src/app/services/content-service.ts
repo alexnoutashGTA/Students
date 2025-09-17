@@ -8,10 +8,16 @@ type PostMessageParams = {
   messageBody: { senderID: string | null | undefined; receiverID: string |null|undefined, message: string|null|undefined };
 }
 
+type getDetailParams = {
+  detailBody: { studentId: string | null | undefined };
+}
+
 @Injectable()
 export class ContentService {
 
-  private  serverAddress = 'https://mybookciti.azurewebsites.net';
+  //private  serverAddress = 'https://mybookciti.azurewebsites.net';
+  private  serverAddress = 'http://localhost:3000';
+
   private remoteContent: object[] = [];
   /* Only ContentService class has access to this private array*/
   private faqContent: string[] = [
@@ -93,6 +99,10 @@ export class ContentService {
   getMessages() {
     const url = `${this.serverAddress}/messages`; // Example URL
     return this.http.get<any[]>(url);
+  }
+  getDetail({detailBody}: getDetailParams) {
+    const url = `${this.serverAddress}/personalInfo`; // Example URL
+    return this.http.post<any[]>(url,detailBody);
   }
 
   postLogin({loginBody}: PostLoginParams){

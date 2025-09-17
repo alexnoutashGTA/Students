@@ -1,5 +1,6 @@
 import {Component, DoCheck, OnChanges, OnInit, signal} from '@angular/core';
 import {MainService} from '../services/main-service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,9 @@ import {MainService} from '../services/main-service';
 })
 export class Home implements OnInit, OnChanges, DoCheck {
 
-  imagesLinks: { url: string; desc: string }[] = []
+  imagesLinks: {
+    studentId: string;
+    url: string; desc: string }[] = []
   llmTopic = '';
   testNumber: number = 0;
   selectedHomeProfile: string = "Alex Noutash";
@@ -23,7 +26,7 @@ export class Home implements OnInit, OnChanges, DoCheck {
   userName: string = '';
 
 
-  constructor(private service: MainService, private windowRef: Window) {
+  constructor(private service: MainService, private windowRef: Window, private router: Router) {
     console.log('home Page Constructor is called');
     this.imagesLinks = service.ImagesLinks.slice(0, 5);
     console.log("Test number: " +this.testNumber);
@@ -86,5 +89,9 @@ export class Home implements OnInit, OnChanges, DoCheck {
 
   saveName() {
     this.service.saveName(this.userName);
+  }
+
+  imageClicked(studentId: string) {
+    this.router.navigate(['/detail', studentId]);
   }
 }
