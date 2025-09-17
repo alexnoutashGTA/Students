@@ -9,7 +9,8 @@ const uri = "mongodb+srv://alexnoutash:MyClass2025!@cluster0.fpj2nzm.mongodb.net
 const mongoClient = new MongoClient(uri);
 const cors = require("cors");
 const {response} = require("express");
-app.use(cors())
+app.use(cors());
+
 
 const client = contentful.createClient({
     space: 'nhlpl73kcz1y',
@@ -55,10 +56,11 @@ app.get('/messages', (req, res) => {
         }
     });
 })
-app.get('/personalInfo',jsonParser, async (req, res) => {
+app.post('/personalInfo',jsonParser, async (req, res) => {
     try {
         const data = req.body;
         const studentId = data["studentId"];
+        console.log(studentId);
         const database = mongoClient.db('MyBook');
         const collection = database.collection('PersonalInformation');
         await mongoClient.connect();
