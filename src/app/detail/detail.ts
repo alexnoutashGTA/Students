@@ -18,10 +18,8 @@ export class Detail implements OnInit{
     this.route.paramMap.subscribe(params => {
       this.studentId = params.get('studentId');
       this.service.getDetail({detailBody:{studentId: this.studentId}}).subscribe(detail => {
-        console.log(detail);
         this.detail = detail
       })
-      console.log(this.studentId);
     });
   }
 }
