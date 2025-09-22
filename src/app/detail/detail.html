@@ -1,17 +1,37 @@
 <div>
-<H1>Contact Information</H1>
-  <div class="infoLine">
-    <h3>Firstname:</h3><h5>----</h5><h5>{{detail.Firstname}}</h5>
-  </div>
-  <div class="infoLine">
-    <h3>Lastname:</h3><h5>----</h5><h5>{{detail.Lastname}}</h5>
-  </div>
-  <div class="infoLine">
-    <h3>Biography:</h3><h5>----</h5><h5>{{detail.Biography}}</h5>
-  </div>
-  <div class="infoLine">
-    <h3>Occupation:</h3><h5>----</h5><h5>{{detail.Occupation}}</h5>
-  </div>
+  <div class="detail" id="detail">
+    <div class="personalInfo" id="persona info">
 
+        <app-child-detail [detail]="detail"></app-child-detail>
+
+    </div>
+    <div class="addressInfo" id="Address info">
+      <H1>Contact Information</H1>
+      <div *ngFor="let ad of detail?.Address; index as i">
+        <div class="infoLine">
+          <h3>City:</h3><h5>----</h5><h5>{{ad?.City}}</h5>
+        </div>
+        <div class="infoLine">
+          <h3>Province:</h3><h5>----</h5><input type="text" [ngModel]="ad?.Province">
+        </div>
+        <div class="infoLine">
+          <h3>Street:</h3><h5>----</h5><h5>{{ad?.Street}}</h5>
+        </div>
+        <div class="infoLine">
+          <h3>Country:</h3><h5>----</h5><h5>{{ad?.Country}}</h5>
+        </div>
+        <div class="infoLine">
+          <h3>Phone:</h3><h5>----</h5><h5>{{ad?.Phone}}</h5>
+        </div>
+        <div class="infoLine">
+          <h3>Occupation:</h3><h5>----</h5><h5>{{detail?.Occupation}}</h5>
+        </div>
+        <button>Edit</button>
+    </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
 <app-lazy-footer></app-lazy-footer>
 </div>

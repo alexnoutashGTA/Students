@@ -6,7 +6,7 @@ import {ContentService} from '../services/content-service';
   selector: 'app-detail',
   standalone: false,
   templateUrl: './detail.html',
-  styleUrl: './detail.css'
+  styleUrls: ['./detail.css']
 })
 export class Detail implements OnInit{
   private studentId: string | null = "";

@@ -22,7 +22,7 @@ import {provideHttpClient} from '@angular/common/http';
     Home,
     Profile,
     Footer,
-    Login
+    Login,
   ],
   imports: [
     GoogleMapsModule,
@@ -40,8 +40,8 @@ import {provideHttpClient} from '@angular/common/http';
     { provide: Window, useValue: window }
   ],
   exports: [
-    Footer
-  ],
+    Footer,
+   ],
   bootstrap: [App]
 })
 export class AppModule { }
