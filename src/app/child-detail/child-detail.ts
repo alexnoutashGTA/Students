@@ -12,15 +12,10 @@ export class ChildDetail implements OnChanges  {
    detailValue:any;
   ngOnChanges() {
     console.log(this.detail);
-    delete this.detail.Address;
-    delete this.detail._id;
-
-    if (this.detail!==undefined) {
+    if (this.detail != null) {
+    /*    Builtin java functions to extract keys and values from and object */
       this.detailLabel = Object.keys(this.detail);
       this.detailValue = Object.values(this.detail);
-      console.log(this.detailValue);
-      console.log(this.detailLabel);
     }
   }
-
 }
