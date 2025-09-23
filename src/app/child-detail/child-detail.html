@@ -4,6 +4,9 @@
 </div>
 </div>
 <br>
-<br>
-<br>
-<button>Edit</button>
+<div class="infoLine_buttons">
+  <button *ngIf="buttonState()=='Edit'" (click)="buttonClicked('Edited')">Edit</button>
+  <button *ngIf="buttonState()!='Edit'" (click)="buttonClicked('Edit')">Cancel</button>
+  <button *ngIf="buttonState()!='Edit'" (click)="buttonClicked('Edit')">Save</button>
+</div>
+

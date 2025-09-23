@@ -1,8 +1,3 @@
-.infoLine {
-  display: flex;
-  flex-direction: row;
-  width: 50%
-}
 
 .detail {
   display: flex;
@@ -11,7 +6,6 @@
   place-content: space-between;
   border: #4a90e2 1px solid;
   padding: 2px;
-  margin-bottom: 50px;
 }
 
 .addressInfo{

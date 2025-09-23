@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, Input, OnChanges, signal} from '@angular/core';
 
 @Component({
   selector: 'app-child-detail',
@@ -10,6 +10,8 @@ export class ChildDetail implements OnChanges  {
   @Input({ required: true }) detail: any;
    detailLabel:any;
    detailValue:any;
+   buttonState = signal("Edit");
+
   ngOnChanges() {
     console.log(this.detail);
     if (this.detail != null) {
@@ -17,5 +19,10 @@ export class ChildDetail implements OnChanges  {
       this.detailLabel = Object.keys(this.detail);
       this.detailValue = Object.values(this.detail);
     }
+  }
+
+  buttonClicked(title:string) {
+    console.log(title)
+    this.buttonState.set(title)
   }
 }
