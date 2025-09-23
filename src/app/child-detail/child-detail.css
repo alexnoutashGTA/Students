@@ -1,9 +1,14 @@
 .infoLine {
   display: flex;
   flex-direction: row;
-  width: 50%;
 }
-infoLine_buttons{
+.infoLine_buttons{
   display: flex;
   flex-direction: row;
+}
+.infoline_input{
+  margin-top: 15px;
+  margin-left: 5px;
+  width: 100%;
+  height: 20px;
 }
