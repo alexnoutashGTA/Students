@@ -6,7 +6,7 @@ import {MenuService} from '../services/menu-service';
   selector: 'app-bread-crumb-menu',
   standalone: false,
   templateUrl: './bread-crumb-menu.html',
-  styleUrl: './bread-crumb-menu.css'
+  styleUrls: ['./bread-crumb-menu.css', '../assets/VishalsTheme.css']
 })
 export class BreadCrumbMenu {
   @Input() title = ''; // decorate the property with @Input()
