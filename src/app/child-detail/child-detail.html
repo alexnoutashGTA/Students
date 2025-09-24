@@ -3,7 +3,7 @@
   <h3>{{item}}:-</h3><h5>{{detailValue[ind]}}</h5>
 </div>
   <div *ngIf="buttonState()=='Edited'" class="infoLine">
-    <h3>{{item}}:-</h3><input class="infoline_input" type="text" [ngModel]="detailValue[ind]">
+    <h3>{{item}}:-</h3><input class="infoline_input" type="text" [(ngModel)]="detailValue[ind]">
   </div>
 </div>
 <br>

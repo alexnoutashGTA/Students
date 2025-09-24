@@ -4,18 +4,15 @@
   flex-direction: row;
   align-content: space-between;
   place-content: space-between;
-  border: #4a90e2 1px solid;
   padding: 2px;
 }
 
 .addressInfo{
   width: 40%;
-  border: #4a90e2 1px solid;
 padding: 10px;
 }
 
 .personalInfo{
   width: 40%;
-  border: #4a90e2 1px solid;
 padding: 10px;
 }

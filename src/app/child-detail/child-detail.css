@@ -5,6 +5,7 @@
 .infoLine_buttons{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .infoline_input{
   margin-top: 15px;

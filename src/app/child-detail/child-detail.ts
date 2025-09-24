@@ -13,7 +13,6 @@ export class ChildDetail implements OnChanges  {
    buttonState = signal("Edit");
 
   ngOnChanges() {
-    console.log(this.detail);
     if (this.detail != null) {
     /*    Builtin java functions to extract keys and values from and object */
       this.detailLabel = Object.keys(this.detail);
@@ -22,7 +21,10 @@ export class ChildDetail implements OnChanges  {
   }
 
   buttonClicked(title:string) {
-    console.log(title)
-    this.buttonState.set(title)
+    this.buttonState.set(title);
+    if (title=='Edit'){
+
+    }
+
   }
 }

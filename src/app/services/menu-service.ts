@@ -13,7 +13,7 @@ export class MenuService {
   MessageLink="messages";
   DetailsLink = "detail"
 
-  LinksList = ["","messages","detail","faq","about-us","settings","log-in"];
-  LabelList = ["Home","Go to Messages","Details","FAQ","About Us", "Settings", "Log in"];
+  LinksList = ["","messages","faq","about-us","settings","log-in"];
+  LabelList = ["Home","Go to Messages","FAQ","About Us", "Settings", "Log in"];
   constructor() { }
 }
