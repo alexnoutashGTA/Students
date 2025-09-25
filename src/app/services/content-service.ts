@@ -119,4 +119,10 @@ export class ContentService {
   getRemoteContent() {
     return this.remoteContent;
   }
+
+  updatePersonalInfo({messageBody}: PostMessageParams) {
+      const url = `${this.serverAddress}/personalInfoUpdate`;
+      console.log(messageBody)// Example URL
+      return this.http.post(url, messageBody);
+    }
 }

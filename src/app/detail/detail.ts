@@ -29,6 +29,11 @@ export class Detail implements OnInit{
   }
 
   childItemChanged(childItem: any) {
-    console.log(childItem)
+    console.log(childItem);
+    Object.assign(this.detail, childItem);
+    console.log(this.detail);
+    this.service.updatePersonalInfo({messageBody: this.detail}).subscribe(x=>{
+      console.log(x)
+    })
   }
 }
