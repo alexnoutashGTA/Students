@@ -72,6 +72,23 @@ app.post('/personalInfo',jsonParser, async (req, res) => {
     }
 });
 
+app.post('/personalInfoUpdate',jsonParser, async (req, res) => {
+    try {
+        const data = req.body;
+        console.log(data);
+        const id = data["_id"];
+        const database = mongoClient.db('MyBook');
+        const collection = database.collection('PersonalInformation');
+        await mongoClient.connect();
+        const user = await collection.replaceOne({ id: `${id}` }, data);
+        res.status(200).send(user);
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({"message":error.message});
+    }
+});
+
 
 
 app.get('/personalinfoes', (req, res) => {
