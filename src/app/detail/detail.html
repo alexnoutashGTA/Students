@@ -2,12 +2,12 @@
   <div class="detail" id="detail">
     <div class="personalInfo" id="persona info">
       <H1>Personal Information</H1>
-        <app-child-detail [detail]="detailDeepCopy"></app-child-detail>
+        <app-child-detail [detail]="detailDeepCopy" (detailChanged)="childItemChanged($event)"></app-child-detail>
     </div>
     <div class="addressInfo" id="Address info">
       <H1>Contact Information</H1>
       <div *ngFor="let address of detail?.Address ">
-          <app-child-detail [detail]="address"></app-child-detail>
+          <app-child-detail [detail]="address" (detailChanged)="childItemChanged($event)" ></app-child-detail>
         <br>
         <br>
         <br>

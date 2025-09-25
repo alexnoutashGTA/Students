@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, signal} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, signal} from '@angular/core';
 
 @Component({
   selector: 'app-child-detail',
@@ -8,7 +8,9 @@ import {Component, Input, OnChanges, signal} from '@angular/core';
 })
 export class ChildDetail implements OnChanges  {
   @Input({ required: true }) detail: any;
-   detailLabel:any;
+  @Output() detailChanged = new EventEmitter<any>();
+
+  detailLabel:any;
    detailValue:any;
    buttonState = signal("Edit");
 
@@ -26,5 +28,16 @@ export class ChildDetail implements OnChanges  {
 
     }
 
+  }
+
+  saveButtonClicked() {
+    console.log("detailClicked")
+    this.buttonState.set('Edit');
+    const newObject= {};
+    this.detailLabel.forEach((item:string, index: number) => {
+      // @ts-ignore
+      newObject[item]= `${this.detailValue[index]}`;
+    });
+    this.detailChanged.emit(newObject)
   }
 }

@@ -19,7 +19,6 @@ export class Detail implements OnInit{
       this.studentId = params.get('studentId');
       this.service.getDetail({detailBody:{studentId: this.studentId}}).subscribe(detail => {
         this.detail = detail
-        console.log(this.detail);
         /*    Builtin java function to clone an object */
         this.detailDeepCopy= structuredClone(this.detail);
         /*    Builtin java function to delete a member from the object */
@@ -27,5 +26,9 @@ export class Detail implements OnInit{
         delete this.detailDeepCopy._id;
       })
     });
+  }
+
+  childItemChanged(childItem: any) {
+    console.log(childItem)
   }
 }
