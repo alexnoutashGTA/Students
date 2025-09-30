@@ -53,7 +53,7 @@ export class MainService {
       {
         url: "https://randomuser.me/api/portraits/women/2.jpg",
         desc: "Second Woman Image",
-        studentId: ""
+        studentId: "CC203697"
       },
       {
         url: "https://randomuser.me/api/portraits/men/3.jpg",
@@ -63,7 +63,8 @@ export class MainService {
       {
         url: "https://randomuser.me/api/portraits/women/3.jpg",
         desc: "Third Woman Image",
-        studentId: ""
+        studentId: "CC203697"
+
       },
       {
         url: "https://randomuser.me/api/portraits/men/4.jpg",
