@@ -58,7 +58,7 @@ export class MainService {
       {
         url: "https://randomuser.me/api/portraits/men/3.jpg",
         desc: "Third Men Image",
-        studentId: ""
+        studentId: "33445566"
       },
       {
         url: "https://randomuser.me/api/portraits/women/3.jpg",
