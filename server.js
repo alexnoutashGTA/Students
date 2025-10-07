@@ -10,7 +10,7 @@ const mongoClient = new MongoClient(uri);
 const cors = require("cors");
 const {response} = require("express");
 
-const allowedOrigins = ['http://localhost:3000', 'https://angular365.com'];
+const allowedOrigins = ['http://localhost:4200', 'https://angular360.com'];
 
 const corsOptions = {
     origin: function(origin,callback) {
