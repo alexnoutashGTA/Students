@@ -10,15 +10,8 @@ const mongoClient = new MongoClient(uri);
 const cors = require("cors");
 const {response} = require("express");
 
-const allowedOrigins = ['http://localhost:3000', 'https://angular360.com'];
 
-const options = {
-
-    origin: '*',
-
-};
-
-app.use(cors(options));
+app.use(cors());
 
 
 const client = contentful.createClient({
