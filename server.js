@@ -9,7 +9,19 @@ const uri = "mongodb+srv://alexnoutash:MyClass2025!@cluster0.fpj2nzm.mongodb.net
 const mongoClient = new MongoClient(uri);
 const cors = require("cors");
 const {response} = require("express");
-app.use(cors());
+
+const allowedOrigins = ['http://localhost:3000', 'https://angular365.com'];
+
+const corsOptions = {
+    origin: function(origin,callback) {
+        if (allowedOrigins.indexOf(origin) !==-1 || !origin) {
+            callback(null, true);
+        } else {callback(new Error('Not allowed by CORS'));}
+    },
+    credentials: true, // Allow sendingcookies/authorizationheaders
+};
+
+app.use(cors(corsOptions));
 
 
 const client = contentful.createClient({
