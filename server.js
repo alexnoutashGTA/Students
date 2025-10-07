@@ -56,6 +56,8 @@ app.get('/faqs', (req, res) => {
         .catch(console.error)
 });
 app.get('/messages', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
+
     new sql.Request().query("SELECT * FROM chathistory", (err, result) => {
         if (err) {
             console.error("Error executing query:", err);
